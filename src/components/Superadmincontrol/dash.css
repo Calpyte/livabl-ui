@@ -1,0 +1,14 @@
+#hello{
+    margin: auto;
+    width: 30%;
+    padding:50px;
+    display: grid;
+    
+}
+
+#bu{
+    
+    background-color: aquamarine;
+    width: 300px;
+
+}

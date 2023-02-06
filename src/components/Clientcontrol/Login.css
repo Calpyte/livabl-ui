@@ -1,0 +1,111 @@
+.wireframe-7-child {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 260px;
+  left: 903px;
+}
+.arroba-2-1-icon {
+  position: absolute;
+  top: 275px;
+  left: 1273px;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+.wireframe-7-item {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 360px;
+  left: 903px;
+}
+.arroba-2-2-icon1 {
+  position: absolute;
+  top: 375px;
+  left: 1273px;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+.login {
+  position: absolute;
+  top: 200px;
+  left: 1086px;
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  color: var(--color-gray-300);
+  display: inline-block;
+  width: 92px;
+  height: 33px;
+}
+.wireframe-7-inner {
+  position: absolute;
+  top: 490px;
+  left: 1000px;
+  cursor: pointer;
+}
+.forgot-password1,
+.if-you-dont-have-an-account {
+  position: absolute;
+  display: inline-block;
+  height: 24px;
+}
+.forgot-password1 {
+  text-decoration: none;
+  top: 440px;
+  left: 1190px;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-200);
+  width: 240px;
+}
+.if-you-dont-have-an-account {
+  top: 596px;
+  left: 955px;
+  font-weight: 300;
+  font-family: var(--font-sarabun);
+  width: 489px;
+}
+.register-here1 {
+  font-weight: 800;
+  color: var(--color-gray-100);
+}
+.register-here {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 596px;
+  left: 1165px;
+  display: inline-block;
+  width: 112px;
+  height: 24px;
+  color: inherit;
+  font-family: var(--font-sarabun);
+}
+.ezgif-2-icon {
+  position: absolute;
+
+  
+  width: 52%;
+  height: 100%;
+}
+.whatsap {
+  position: absolute;
+  top: 100px;
+  left: 989px;
+  width: 318px;
+  height: 99px;
+  object-fit: cover;
+}
+.wireframe-7 {
+  position: relative;
+  border-radius: var(--br-md);
+  background-color: var(--color-white);
+  width: 100%;
+  height: 750px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

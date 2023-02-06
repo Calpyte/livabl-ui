@@ -1,0 +1,1005 @@
+.home1-view-child,
+.home1-view-item {
+  position: absolute;
+  top: 163px;
+  left: 554.35px;
+  border-radius: var(--br-sm);
+  width: 279px;
+  height: 68px;
+}
+.home1-view-item {
+  left: 320.35px;
+}
+.home1-view-inner {
+  position: absolute;
+  top: 21px;
+  left: 124px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.25);
+  width: 1194px;
+  height: 85px;
+
+}
+.ellipse-icon,
+.whatsapp-image-2022-12-22-at-9 {
+  position: absolute;
+  top: 35px;
+  left: 152px;
+  width: 239px;
+  height: 65px;
+  object-fit: cover;
+}
+.ellipse-icon {
+  left: 1230px;
+  width: 58px;
+  height: 58px;
+}
+.home1-view-child1 {
+  position: absolute;
+  top: 53px;
+  left: 674px;
+  width: 16px;
+  height: 26px;
+}
+.home1-view-child2,
+.vector-icon {
+  position: absolute;
+  top: 162px;
+  left: 78px;
+  border-radius: var(--br-sm);
+  width: 1287px;
+  height: 359px;
+}
+.home1-view-child2 {
+  top: 230.5px;
+  left: 81px;
+  width: 717px;
+  height: 1px;
+}
+.home1-view-child3,
+.home1-view-child4,
+.home1-view-child5,
+.rectangle-div,
+.rectangle-icon {
+  position: absolute;
+  top: 572px;
+  left: 410px;
+  border-radius: var(--br-xl);
+  width: 291px;
+  height: 97px;
+}
+.rectangle-div {
+  background-color: var(--color-white);
+}
+.home1-view-child3,
+.home1-view-child4,
+.home1-view-child5,
+.rectangle-icon {
+  object-fit: cover;
+}
+.home1-view-child3,
+.home1-view-child4,
+.home1-view-child5 {
+  left: 742px;
+}
+.home1-view-child4,
+.home1-view-child5 {
+  left: 1074px;
+}
+.home1-view-child5 {
+  left: 78px;
+}
+.scope-1,
+.scope-2,
+.scope-3 {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 180px;
+  left: 111px;
+  font-weight: 800;
+  color: var(--color-teal);
+  display: inline-block;
+  width: 189px;
+  height: 41px;
+}
+.scope-2,
+.scope-3 {
+  left: 364px;
+  color:black;
+}
+.scope-3 {
+  left: 597px;
+  color: black;
+}
+.rectangle-section {
+  position: absolute;
+  top: 714px;
+  left: 78px;
+  border-radius: var(--br-md);
+  background-color: var(--color-white);
+  width: 1284px;
+  height: 919px;
+}
+.stationary-combustion {
+  text-decoration: none;
+  position: absolute;
+  top: 592px;
+  left: 102px;
+  font-weight: 800;
+  font-family: var(--font-montserrat);
+  color: var(--color-teal);
+  text-align: center;
+  display: inline-block;
+  width: 244px;
+  height: 122px;
+}
+.mobile {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: black;
+
+}
+.mobile2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: green;
+
+}
+.mobile1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: black;
+}
+.combustion {
+  margin: 0;
+  color: black;
+  
+}
+.combustion2 {
+  margin: 0;
+  color: green;
+  
+}
+.combustion1 {
+  margin: 0;
+  color: green;
+}
+.mobile-combustion {
+  position: absolute;
+  left: 434px;
+  display: inline-block;
+}
+.fugitive-emissions,
+.mobile-combustion,
+.process-emissions {
+  cursor: pointer;
+  text-decoration: none;
+  top: 592px;
+  font-weight: 800;
+  font-family: var(--font-montserrat);
+  color: inherit;
+  text-align: center;
+  width: 244px;
+  height: 122px;
+}
+.fugitive-emissions {
+  position: absolute;
+  left: 765px;
+  display: inline-block;
+}
+.process-emissions {
+  left: 1105px;
+}
+.di,
+.p,
+.process-emissions,
+.tonnes-of-co2eq {
+  position: absolute;
+  display: inline-block;
+}
+.di {
+  top: 281px;
+  left: 950px;
+  font-size: 120px;
+  font-weight: 600;
+  font-family: var(--font-sarabun);
+  width: 405px;
+  height: 194px;
+  text-align: center  ;
+}
+.p,
+.tonnes-of-co2eq {
+  margin: 0;
+}
+.p {
+  top: 765px;
+  left: 1135px;
+  font-size: 64px;
+  font-weight: 600;
+  width: 405px;
+  height: 194px;
+}
+.tonnes-of-co2eq {
+  top: 427px;
+  left: 1082px;
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  width: 290px;
+  height: 96px;
+}
+.home1-view-child6,
+.line-div {
+  position: absolute;
+  box-sizing: border-box;
+}
+.home1-view-child6 {
+  top: 889px;
+  left: 128px;
+  border-radius: 7px;
+  border: 1.5px solid var(--color-gray-200);
+  width: 1190px;
+  height: 641px;
+}
+.line-div {
+  top: 951.5px;
+  left: 127.5px;
+  border-top: 1px solid var(--color-gray-200);
+  width: 1191px;
+  height: 1px;
+}
+.home1-view-child10,
+.home1-view-child11,
+.home1-view-child12,
+.home1-view-child13,
+.home1-view-child7,
+.home1-view-child8,
+.home1-view-child9 {
+  position: absolute;
+  top: 1018.5px;
+  left: 127.5px;
+  border-top: 1px solid var(--color-gray-200);
+  box-sizing: border-box;
+  width: 1191px;
+  height: 1px;
+}
+.home1-view-child10,
+.home1-view-child11,
+.home1-view-child12,
+.home1-view-child13,
+.home1-view-child8,
+.home1-view-child9 {
+  top: 1090.5px;
+}
+.home1-view-child10,
+.home1-view-child11,
+.home1-view-child12,
+.home1-view-child13,
+.home1-view-child9 {
+  top: 1164.5px;
+}
+.home1-view-child10,
+.home1-view-child11,
+.home1-view-child12,
+.home1-view-child13 {
+  top: 1236.5px;
+}
+.home1-view-child11,
+.home1-view-child12,
+.home1-view-child13 {
+  top: 1313.5px;
+}
+.home1-view-child12,
+.home1-view-child13 {
+  top: 1385.5px;
+}
+.home1-view-child13 {
+  top: 1458.5px;
+}
+.carbon-footprint,
+.date,
+.facility-name,
+.quantity,
+.sno,
+.source-of-emission,
+.type-of-fuel {
+  margin: 0;
+  position: absolute;
+  top: 912px;
+  left: 152px;
+  font-size: var(--font-size-2xs);
+  font-weight: 700;
+  color: var(--color-gray-500);
+  text-align: center;
+  display: inline-block;
+  width: 54px;
+  height: 37px;
+}
+.carbon-footprint,
+.date,
+.facility-name,
+.quantity,
+.source-of-emission,
+.type-of-fuel {
+  left: 237px;
+  width: 140px;
+}
+.carbon-footprint,
+.date,
+.quantity,
+.source-of-emission,
+.type-of-fuel {
+  left: 417px;
+}
+.carbon-footprint,
+.date,
+.quantity,
+.source-of-emission {
+  left: 602px;
+  width: 139px;
+}
+.carbon-footprint,
+.date,
+.source-of-emission {
+  left: 800px;
+}
+.carbon-footprint,
+.date {
+  left: 979px;
+  width: 140px;
+}
+.carbon-footprint {
+  left: 1135px;
+}
+.arrow-down-filled-triangle,
+.arrow-down-filled-triangle1 {
+  position: absolute;
+  top: 919px;
+  left: 935px;
+  width: 8px;
+  height: 8px;
+  object-fit: cover;
+}
+.arrow-down-filled-triangle1 {
+  left: 533px;
+}
+.home1-view-child14,
+.home1-view-child15 {
+  position: absolute;
+  top: 805px;
+  left: 128px;
+  background-color: #f0c253;
+  width: 116px;
+  height: 28px;
+}
+.home1-view-child15 {
+  left: 244px;
+  background-color: #d68046;
+  width: 186px;
+}
+.home1-view-child16,
+.home1-view-child17 {
+  position: absolute;
+  top: 805px;
+  left: 430px;
+  background-color: #8ec3b3;
+  width: 445px;
+  height: 28px;
+}
+.home1-view-child17 {
+  left: 873px;
+  background-color: #86b6f9;
+  width: 136px;
+}
+.tonnes-of-co2eq1,
+.total-em {
+  margin: 0;
+  position: absolute;
+  top: 747px;
+  left: 1140px;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  display: inline-block;
+  width: 293px;
+  height: 35px;
+}
+.tonnes-of-co2eq1 {
+  top: 840px;
+  left: 1138px;
+  font-size: var(--font-size-xs);
+}
+.add-data,
+.total-composition-of-carbon-fo {
+  position: absolute;
+  color: var(--color-black);
+  display: inline-block;
+}
+.total-composition-of-carbon-fo {
+  margin: 0;
+  top: 763px;
+  left: 134px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  width: 786px;
+  height: 29px;
+}
+.add-data {
+  text-decoration: underline;
+  top: 963px;
+  left: 1153px;
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  text-align: center;
+  width: 174px;
+  height: 59px;
+  cursor: pointer;
+}
+.factory-pollution-city-air-and-icon {
+  position: absolute;
+  top: 251px;
+  left: 183px;
+  width: 640px;
+  height: 254px;
+  object-fit: cover;
+}
+.dashboard,
+.measure,
+.offset,
+.reduce {
+  cursor: pointer;
+  text-decoration: underline;
+  position: absolute;
+  top: 53px;
+  left: 461px;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+  color: var(--color-teal);
+  display: inline-block;
+  width: 106px;
+  height: 31px;
+}
+.dashboard,
+.offset,
+.reduce {
+  text-decoration: none;
+  left: 645px;
+  color: var(--color-black);
+}
+.dashboard,
+.offset {
+  left: 823px;
+}
+.dashboard {
+  left: 983px;
+  width: 140px;
+}
+.home1-view {
+  position: relative;
+  border-radius: var(--br-md);
+  background-color: #f4f6f9;
+  width: 100%;
+  height: 2021px;
+ 
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-600);
+  font-family: var(--font-sarabun);
+}
+.home1-vie{
+  position: relative;
+  border-radius: var(--br-md);
+  background-color: #f4f6f9;
+  width: 100%;
+  height: 1721px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-600);
+  font-family: var(--font-sarabun);
+}
+tbody {
+  border-top: 1px solid black;
+  
+}
+
+tbody td, thead th {
+  width : 200px;
+  border-right: 1px solid black;
+  text-align:center;
+}
+td {
+  text-align:center;
+}
+
+table.info {
+  width: 1400px;
+  
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+
+
+thead tr th {
+  height: 40px;
+  line-height: 20px;
+  
+}
+
+
+.info{
+  position: absolute;
+  top: 1000px;
+  left: 70px;
+}
+.infoo{
+  position: absolute;
+  top: 1000px;
+  left: 70px;
+}
+
+td {
+  text-align:center;
+}
+
+
+
+table.infoo {
+  width: 1400px;
+  
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border: 1px solid black;
+}
+table.infooo {
+  width: 1200px;
+  
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border: 1px solid black;
+}
+.infooo{
+  position: absolute;
+  top: 1000px;
+  left: 130px;
+}
+
+.down1{
+  position: absolute;
+  top: 1000px;
+  left: 130px;
+}
+
+/* this is//////////////////////////////////////////////////////////////////////////////////// */
+table.down1 {
+  width: 1200px;
+  
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+/* To display the block as level element */
+table.down1 tbody, table.down1 thead {
+  display: block;
+}
+
+thead tr th {
+  height: 40px;
+  line-height: 20px;
+  
+}
+
+table.down1 tbody {
+  
+  /* Set the height of table body */
+  height: 200px;
+  
+  /* Set vertical scroll */
+  overflow-y: auto;
+  
+  /* Hide the horizontal scroll */
+  overflow-x: hidden;
+}
+
+
+
+table.down2 {
+  width: 1200px;
+  
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+/* To display the block as level element */
+table.down2 tbody, table.down2 thead {
+  display: block;
+}
+
+thead tr th {
+  height: 40px;
+  line-height: 20px;
+  
+}
+
+table.down2 tbody {
+  
+  /* Set the height of table body */
+  height: 200px;
+  
+  /* Set vertical scroll */
+  overflow-y: auto;
+  
+  /* Hide the horizontal scroll */
+  overflow-x: hidden;
+}
+.down2{
+  position: absolute;
+  top: 1400px;
+  left: 130px;
+}
+.down3{
+  position: absolute;
+  top: 1800px;
+  left: 130px;
+}
+table.down3 {
+  width: 1200px;
+  
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border: 1px solid black;
+}
+.down4{
+  position: absolute;
+  top: 1200px;
+  left: 50px;
+}
+table.down4 {
+  width: 1400px;
+  
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border: 1px solid black;
+}
+.total{
+  
+  position: absolute;
+  width: 405px;
+  height: 194px;
+  left: 1049px;
+  top: 311px;
+  
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 156px;
+  
+  color: black;
+  }
+  .tonnes{
+    
+  position: absolute;
+  width: 20%;
+  height: 96px;
+  left: 1052px;
+  top: 427px;
+  
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 32px;
+  
+  color: black;
+  }
+  .station-2{
+    
+    position: absolute;
+    width: 405px;
+    height: 194px;
+    left: 374px;
+    top: 817px;
+    
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 156px;
+    
+    color: black;
+    }
+  .station{  
+      position: absolute;
+      width: 20%;
+      height: 96px;
+      left: 379px;
+      top: 931px;
+      
+      font-family: 'Sarabun';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 25px;
+      line-height: 32px;
+      
+      color: black;
+      }
+  .mobilemain{
+    position: absolute;
+    width: 20%;
+    height: 96px;
+    left: 839px;
+    top: 931px;
+    
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 32px;
+    
+    color: black;
+  }
+  .mobile-2{
+    position: absolute;
+    width: 405px;
+    height: 194px;
+    left: 834px;
+    top: 817px;
+    
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 156px;
+    
+    color: black;
+  }
+  .fugitive{
+    position: absolute;
+    width: 20%;
+    height: 96px;
+    left: 839px;
+    top: 1241px;
+    
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 32px;
+    
+    color: black;
+  }
+  .fugitive-2{
+    position: absolute;
+    width: 405px;
+    height: 194px;
+    left: 834px;
+    top: 1127px;
+    
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 156px;
+    
+    color: black;
+  }
+  .process{
+      position: absolute;
+      width: 20%;
+      height: 96px;
+      left: 384px;
+      top: 1241px;
+      
+      font-family: 'Sarabun';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 25px;
+      line-height: 32px;
+      
+      color: black;
+  }
+  .process-2{
+    position: absolute;
+    width: 20%;
+    height: 194px;
+    left: 374px;
+    top: 1127px;
+    
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 156px;
+    
+    color: black;
+  }
+  .rect{
+    
+  position: absolute;
+  width: 1284px;
+  height: 390px;
+  left: 78px;
+  top: 224px;
+  
+  background: white;
+  border-radius: 15px;
+  }
+  .rectt{
+    
+    position: absolute;
+    width: 1284px;
+    height: 690px;
+    left: 78px;
+    top: 684px;
+    
+    background: white;
+    border-radius: 15px;
+    }
+  .scope1{
+    position: absolute;
+    width: 35%;
+    height: 194px;
+    left: 600px;
+    top: 684px;
+    
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 156px;
+    
+    color: black;
+  }
+  .amplifier{
+    background-color: #f4f6f9;
+  }
+  /* .pie{
+    position:absolute;
+    left:400px;
+    top: 400px;;
+  } */
+  .scope2{
+    
+      position: absolute;
+      width: 35%;
+      height: 194px;
+      left: 600px;
+      top: 1284px;
+      
+      font-family: 'Sarabun';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 156px;
+      
+      color: black;
+    
+  }
+  .electricity-2{
+    position: absolute;
+    width: 20%;
+    height: 194px;
+    left: 640px;
+    top: 1404px;
+    
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 156px;
+    
+    color: black;
+  }
+  .electricity{
+    position: absolute;
+    width: 20%;
+    height: 194px;
+    left: 605px;
+    top: 1460px;
+    
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 156px;
+    
+    color: black;
+  } .rep{
+    width: 100px;
+ background-color: white;
+ border-radius: 2px;
+ position: absolute;
+ top: 150px;
+ left:1250px;
+  }
+  .colorled{
+    position: absolute;
+    top: 270px;
+    left: 570px;
+    background-color: grey;
+    width: 30px;
+    height:30px;
+  }
+ 
+  .colorled1{
+    position: absolute;
+    top: 320px;
+    left: 570px;
+    background-color: green;
+    width: 30px;
+    height:30px;
+  }
+  .colorled2{
+    position: absolute;
+    top: 370px;
+    left: 570px;
+    background-color: purple;
+    width: 30px;
+    height:30px;
+  }
+  .colorled3{
+    position: absolute;
+    top: 420px;
+    left: 570px;
+    background-color: blue;
+    width: 30px;
+    height:30px;
+  }
+  .colorled4{
+    position: absolute;
+    top: 470px;
+    left: 570px;
+    background-color: black;
+    width: 30px;
+    height:30px;
+  }
+  .colorled5{
+    position: absolute;
+    top: 520px;
+    left: 570px ;
+    background-color: red;
+    width: 30px;
+    height:30px;
+  }
+  .legd {
+    position: absolute;
+    top: 245px;
+    left:600px;
+
+  }
+  .legd1 {
+    position: absolute;
+    top: 300px;
+    left:600px;
+
+  }
+  .legd2 {
+    position: absolute;
+    top: 350px;
+    left:600px;
+
+  }
+  .legd3 {
+    position: absolute;
+    top: 400px;
+    left:600px;
+
+  }
+  .legd4 {
+    position: absolute;
+    top: 450px;
+    left:600px;
+
+  }
+  .legd5 {
+    position: absolute;
+    top: 500px;
+    left:600px;
+
+  }

@@ -1,0 +1,134 @@
+.wireframe-8-child,
+.wireframe-8-inner,
+.wireframe-8-item,.wireframe-8-hell {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 425px;
+  left: 112px;
+}
+.wireframe-8-inner,
+.wireframe-8-item {
+  top: 272px;
+}
+.wireframe-8-hell{
+  top: 347px;
+}
+.wireframe-8-inner {
+  top: 200px;
+}
+.arroba-2-3-icon {
+  position: absolute;
+  top: 215px;
+  left: 482px;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+.rectangle-textfield {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 510px;
+  left: 112px;
+}
+.rectangle-textfieldc {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 510px;
+  left: 112px;
+}
+.arroba-2-2-icon,
+.arroba-2-4-icon {
+  position: absolute;
+  top: 440px;
+  left: 482px;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+.arroba-2-4-icon {
+  top: 525px;
+}
+.sign-up {
+  position: absolute;
+  top: 150px;
+  left: 288px;
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  display: inline-block;
+  width: 92px;
+  height: 33px;
+}
+.rectangle-button {
+  position: absolute;
+  top: 630px;
+  left: 209px;
+  cursor: pointer;
+}
+.rectangle-buttonlog {
+  position: absolute;
+  top: 630px;
+  left: 209px;
+  cursor: pointer;
+}
+.forgot-password {
+  text-decoration: none;
+  position: absolute;
+  top: 578px;
+  left: 400px;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-200);
+  display: inline-block;
+  width: 240px;
+  height: 24px;
+}
+.whatsapp {
+  position: absolute;
+  top: 50px;
+  left: 187px;
+  width: 318px;
+  height: 99px;
+  object-fit: cover;
+}
+.ezgif-3-icon {
+  position: absolute;
+ 
+  right: 0%;
+  width: 53%;
+  height: 100%;
+}
+.already-have-an {
+  font-weight: 300;
+}
+.already-have-an-account,
+.login-here {
+  position: absolute;
+  top: 700px;
+  left: 191px;
+  color: var(--color-black);
+  display: inline-block;
+  width: 489px;
+  height: 24px;
+  font-family: var(--font-sarabun);
+}
+.login-here {
+  cursor: pointer;
+  text-decoration: none;
+  left: 377px;
+  font-weight: 800;
+  color: var(--color-gray-100);
+}
+.wireframe-8 {
+  position: relative;
+  border-radius: var(--br-md);
+  background-color: var(--color-white);
+  width: 100%;
+  height: 750px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-300);
+  font-family: var(--font-inter);
+}

@@ -1,0 +1,558 @@
+.whatsapp-image-2022-12-22-at-91 {
+  position: absolute;
+  top: 50px;
+  left: 1215px;
+  width: 195px;
+  height: 61px;
+  object-fit: cover;
+}
+.asset-declaration-child {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 223px;
+  left: 289px;
+}
+.facility-id {
+  position: absolute;
+  top: 192px;
+  left: 289px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-gray-300);
+  text-align: left;
+  display: inline-block;
+  width: 92px;
+  height: 31px;
+}
+.asset-declaration-item {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 222px;
+  left: 468px;
+}
+.facility-n {
+  position: absolute;
+  top: 191px;
+  left: 468px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-gray-300);
+  text-align: left;
+  display: inline-block;
+  width: 151px;
+  height: 31px;
+}
+.asset-declaration-inner {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 222px;
+  left: 682px;
+}
+.latitude {
+  position: absolute;
+  top: 191px;
+  left: 682px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-gray-300);
+  text-align: left;
+  display: inline-block;
+  width: 151px;
+  height: 31px;
+}
+.asset-declaration-child1,
+.rectangle-textfield {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 222px;
+  left: 914px;
+}
+.rectangle-textfieldlong {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 222px;
+  left: 914px;
+}
+.asset-declaration-child1 {
+  left: 1146px;
+}
+.facility-type,
+.longitude {
+  position: absolute;
+  top: 191px;
+  left: 914px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-gray-300);
+  text-align: left;
+  display: inline-block;
+  width: 151px;
+  height: 31px;
+}
+.facility-type {
+  left: 1146px;
+}
+.asset-declaration-child2 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 719px;
+  left: 289px;
+}
+.product-id {
+  position: absolute;
+  top: 687px;
+  left: 289px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-gray-300);
+  text-align: left;
+  display: inline-block;
+  width: 92px;
+  height: 31px;
+}
+.asset-declaration-child3 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 718px;
+  left: 423px;
+}
+.product-description {
+  position: absolute;
+  top: 687px;
+  left: 423px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-gray-300);
+  text-align: left;
+  display: inline-block;
+  width: auto;
+  height: 31px;
+}
+.asset-declaration-child4 {
+  position: absolute;
+  top: 150px;
+  left: 103px;
+  width: 137px;
+  height: 137px;
+  object-fit: cover;
+}
+.asset-declaration-child5 {
+  position: absolute;
+  top: 70px;
+  left: 506px;
+  width: 28px;
+  height: 28px;
+}
+.asset-declaration-child6,
+.asset-declaration-child7 {
+  position: absolute;
+  top: 70px;
+  left: 755px;
+  width: 28px;
+  height: 28px;
+}
+.asset-declaration-child7 {
+  left: 1004px;
+}
+.asset-declaration-child8,
+.asset-declaration-child9 {
+  position: absolute;
+  top: 83.5px;
+  box-sizing: border-box;
+  width: 205px;
+  height: 1px;
+}
+.asset-declaration-child8 {
+  left: 540.5px;
+  border-top: 1px dashed green;
+}
+.asset-declaration-child9 {
+  left: 791.5px;
+  border-top: 1px dashed var(--color-black);
+}
+.next {
+  position: absolute;
+  top: 332px;
+  left: 1107px;
+  font-size: 20px;
+  display: inline-block;
+  color: var(--color-white);
+  width: 165px;
+  height: 27px;
+}
+.asset-declaration2,
+.company-details2 {
+  position: absolute;
+  top: 102px;
+  left: 477px;
+  font-size: var(--font-size-2xs);
+  color: var(--color-black);
+  text-align: left;
+  display: inline-block;
+  width: 471px;
+  height: 71px;
+}
+.asset-declaration2 {
+  left: 719px;
+}
+.rectangle-div {
+  position: absolute;
+  top: 377px;
+  left: 289px;
+  border-radius: var(--br-sm);
+  border: 1.5px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 1024px;
+  height: 238px;
+}
+.asset-declaration-child10,
+.asset-declaration-child11,
+.asset-declaration-child12 {
+  position: absolute;
+  top: 430.5px;
+  left: 288.5px;
+  border-top: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 1025px;
+  height: 1px;
+}
+.asset-declaration-child11,
+.asset-declaration-child12 {
+  top: 488.5px;
+}
+.asset-declaration-child12 {
+  top: 550.5px;
+}
+.asset-id,
+.asset-name,
+.latitude1,
+.sno {
+  position: absolute;
+  top: 396px;
+  left: 310px;
+  display: inline-block;
+  width: 46px;
+  height: 33px;
+}
+.asset-id,
+.asset-name,
+.latitude1 {
+  left: 400px;
+  width: 80px;
+}
+.asset-name,
+.latitude1 {
+  left: 544px;
+  width: 120px;
+}
+.latitude1 {
+  left: 726px;
+}
+.asset-declaration-child13 {
+  position: absolute;
+  top: 792px;
+  left: 289px;
+  border-radius: var(--br-sm);
+  border: 1.5px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 374px;
+  height: 168px;
+}
+.asset-declaration-child14,
+.asset-declaration-child15 {
+  position: absolute;
+  top: 845.5px;
+  left: 288.5px;
+  border-top: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 375px;
+  height: 1px;
+}
+.asset-declaration-child15 {
+  top: 903.5px;
+}
+.asset-type,
+.longitude1,
+.product-description1,
+.product-id1,
+.sno1 {
+  position: absolute;
+  top: 811px;
+  left: 296px;
+  display: inline-block;
+  width: 42px;
+  height: 33px;
+}
+.asset-type,
+.longitude1,
+.product-description1,
+.product-id1 {
+  left: 361px;
+  width: 80px;
+}
+.asset-type,
+.longitude1,
+.product-description1 {
+  top: 809px;
+  left: 505px;
+  width: 129px;
+}
+.asset-type,
+.longitude1 {
+  top: 396px;
+  left: 916px;
+  width: 120px;
+}
+.asset-type {
+  left: 1119px;
+}
+.rectangle-button {
+  position: absolute;
+  top: 295px;
+  left: 1172px;
+}
+.asset-declaration-child16 {
+  position: absolute;
+  top: 718px;
+  left: 675px;
+}
+.asset-declaration-child17 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 719px;
+  left: 825px;
+}
+.service-id {
+  position: absolute;
+  top: 687px;
+  left: 825px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-gray-300);
+  text-align: left;
+  display: inline-block;
+  width: 92px;
+  height: 31px;
+}
+.asset-declaration-child18 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 719px;
+  left: 958px;
+}
+.service-description {
+  position: absolute;
+  top: 687px;
+  left: 959px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-gray-300);
+  text-align: left;
+  display: inline-block;
+  width: auto;
+  height: 31px;
+}
+.asset-declaration-child19 {
+  position: absolute;
+  top: 792px;
+  left: 825px;
+  border-radius: var(--br-sm);
+  border: 1.5px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 373px;
+  height: 168px;
+}
+.asset-declaration-child20,
+.asset-declaration-child21 {
+  position: absolute;
+  top: 845.5px;
+  left: 824.5px;
+  border-top: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 374px;
+  height: 1px;
+}
+.asset-declaration-child21 {
+  top: 903.5px;
+}
+.service-description1,
+.service-id1,
+.sno2 {
+  position: absolute;
+  top: 811px;
+  left: 833px;
+  display: inline-block;
+  width: 42px;
+  height: 33px;
+}
+.service-description1,
+.service-id1 {
+  left: 901px;
+  width: 79px;
+}
+.service-description1 {
+  left: 1047px;
+  width: 128px;
+}
+.asset-declaration-child22,
+.questionarre1 {
+  position: absolute;
+  top: 719px;
+  left: 1211px;
+}
+.questionarre1 {
+  top: 102px;
+  left: 978px;
+  font-size: var(--font-size-2xs);
+  color: var(--color-black);
+  text-align: left;
+  display: inline-block;
+  width: 471px;
+  height: 71px;
+}
+.asset-declaration-child23 {
+  position: absolute;
+  top: 1034px;
+  left: 1077px;
+  cursor: pointer;
+}
+.asset-declaration1 {
+  position: relative;
+  border-radius: var(--br-md);
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1177px;
+  overflow-y: auto;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-200);
+  font-family: var(--font-sarabun);
+}
+table.scrolldown {
+  width: 900px;
+  
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border: 1px solid black;
+  table-layout: auto;
+}
+
+/* To display the block as level element */
+table.scrolldown tbody, table.scrolldown thead {
+  display: block;
+}
+
+thead tr th {
+  height: 40px;
+  line-height: 20px;
+  
+}
+
+table.scrolldown tbody {
+  
+  /* Set the height of table body */
+  height: 200px;
+  
+  /* Set vertical scroll */
+  overflow-y: auto;
+  
+  /* Hide the horizontal scroll */
+  overflow-x: hidden;
+}
+
+tbody {
+  border-top: 1px solid black;
+  
+}
+
+tbody td, thead th {
+  width : 150px;
+  border-right: 1px solid black;
+  
+}
+td {
+  text-align:center;
+}
+.scrolldown{
+  position: absolute;
+  top: 370px;
+  left: 300px;
+}
+.scrolldownp{
+  position: absolute;
+  top: 800px;
+  left: 250px;
+  
+}
+.scrolldowns{
+  position: absolute;
+  top: 800px;
+  left: 810px;
+}
+table.scrolldownp tbody {
+  
+  /* Set the height of table body */
+  height: 100px;
+  
+  /* Set vertical scroll */
+  overflow-y: auto;
+  
+  /* Hide the horizontal scroll */
+  overflow-x: hidden;
+
+}
+table.scrolldownp {
+  width: 420px;
+
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border: 1px solid black;
+  table-layout: auto;
+}
+table.scrolldownp tbody, table.scrolldownp thead {
+  display: block;
+  
+}
+table.scrolldowns tbody, table.scrolldowns thead {
+  display: block;
+}
+table.scrolldowns tbody {
+  
+  /* Set the height of table body */
+  height: 100px;
+  
+  /* Set vertical scroll */
+  overflow-y: auto;
+  
+  /* Hide the horizontal scroll */
+  overflow-x: hidden;
+}
+table.scrolldowns {
+  width: 420px;
+  
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border: 1px solid black;
+  table-layout: auto;
+}
+table,th,td{
+ 
+border-collapse: collapse;
+  border-radius: 5px;
+
+
+}
+.rectangle-button001 {
+  position: absolute;
+  top: 295px;
+  left: 1172px;
+}

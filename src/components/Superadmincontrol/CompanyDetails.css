@@ -1,0 +1,38 @@
+.sup{
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+.sbuuton{
+  position: relative;
+  top: 200px;
+  left: 250px;
+  
+}
+.inp{
+  width: 400px;
+  height: 40px;
+  border-radius: 3px;
+}
+.danger{
+  position: absolute;
+  left: 450px;
+  height: 400px;
+  width: 600px;
+  border-radius: 10px;
+  background-color: red;
+}
+.danger2{
+  top: 630px;
+  position: absolute;
+  left: 70px;
+  height: 600px;
+  width: 600px;
+  border-radius: 10px;
+  background-color: white;
+}
+.butttonsuper{
+  width: 100px;
+  background-color:lightgreen;
+  border-radius: 4px;
+}

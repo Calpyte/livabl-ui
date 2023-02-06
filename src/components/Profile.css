@@ -1,0 +1,16 @@
+.Profile{
+    position: absolute;
+    left: 500px;
+    background-color: aqua;
+    margin: auto;
+    border-radius: 10px;
+    width: 500px;
+    align-self: center;
+    
+}
+.text{
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 10px;
+    
+}

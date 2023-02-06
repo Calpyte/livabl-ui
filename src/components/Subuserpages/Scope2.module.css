@@ -1,0 +1,365 @@
+.scope2Child,
+.scope2Inner,
+.scope2Item {
+  position: absolute;
+  top: 163px;
+  left: 554.35px;
+  border-radius: 14px;
+  width: 279px;
+  height: 68px;
+}
+.scope2Inner,
+.scope2Item {
+  left: 320.35px;
+}
+.scope2Inner {
+  top: 21px;
+  left: 124px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.25);
+  width: 1194px;
+  height: 85px;
+}
+.ellipseIcon,
+.whatsappImage20221222At9 {
+  position: absolute;
+  top: 35px;
+  left: 152px;
+  width: 259px;
+  height: 65px;
+  object-fit: cover;
+}
+.ellipseIcon {
+  left: 1230px;
+  width: 58px;
+  height: 58px;
+  cursor: pointer;
+}
+.scope2Child1 {
+  position: absolute;
+  top: 53px;
+  left: 674px;
+  width: 16px;
+  height: 26px;
+}
+.rectangleIcon,
+.scope2Child2,
+.vectorIcon {
+  position: absolute;
+  top: 162px;
+  left: 78px;
+  border-radius: 14px;
+  width: 1287px;
+  height: 359px;
+}
+.rectangleIcon,
+.scope2Child2 {
+  top: 230.5px;
+  left: 81px;
+  width: 717px;
+  height: 1px;
+}
+.rectangleIcon {
+  top: 572px;
+  left: 78px;
+  border-radius: 17px;
+  width: 291px;
+  height: 97px;
+  object-fit: cover;
+}
+.scope1,
+.scope21,
+.scope3 {
+  text-decoration: none;
+  position: absolute;
+  top: 180px;
+  left: 111px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #bbb;
+  display: inline-block;
+  width: 189px;
+  height: 41px;
+}
+.scope21,
+.scope3 {
+  left: 364px;
+  color: inherit;
+}
+.scope3 {
+  left: 597px;
+  color: #bbb;
+}
+.rectangleDiv {
+  position: absolute;
+  top: 714px;
+  left: 78px;
+  border-radius: 15px;
+  background-color: #fff;
+  width: 1284px;
+  height: 925px;
+}
+.electricity {
+  text-decoration: none;
+  position: absolute;
+  top: 607px;
+  left: 109px;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: Montserrat;
+  color: inherit;
+  text-align: center;
+  display: inline-block;
+  width: 214px;
+  height: 122px;
+}
+.activityCaptured,
+.h1,
+.thisSectionCaptures,
+.tonnesOfCo2eq {
+  margin: 0;
+  position: absolute;
+  top: 281px;
+  left: 1049px;
+  font-size: 120px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #7a7a7a;
+  display: inline-block;
+  width: 405px;
+  height: 194px;
+  align-items: center;
+}
+.activityCaptured,
+.thisSectionCaptures,
+.tonnesOfCo2eq {
+  top: 427px;
+  left: 1082px;
+  font-size: 25px;
+  font-weight: 800;
+  width: 290px;
+  height: 96px;
+}
+.activityCaptured,
+.thisSectionCaptures {
+  top: 864px;
+  left: 158px;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: Montserrat;
+  color: #797979;
+  width: 913px;
+  height: 141px;
+}
+.activityCaptured {
+  top: 979px;
+  width: 670px;
+}
+.scope2Child3 {
+  position: absolute;
+  top: 1170px;
+  left: 639px;
+  border-radius: 11px;
+  background-color: #fff;
+  border: 1.5px solid #cfcfcf;
+  box-sizing: border-box;
+  width: 421px;
+  height: 65px;
+}
+.rectangleTextfield,
+.scope2Child4 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 1089px;
+  left: 640px;
+}
+.scope2Child4 {
+  top: 1251px;
+  border-radius: 11px;
+  background-color: #fff;
+  border: 1.5px solid #cfcfcf;
+  box-sizing: border-box;
+  width: 421px;
+  height: 65px;
+}
+.quantity,
+.siUnits {
+  position: absolute;
+  top: 1193px;
+  left: 674px;
+  font-size: 40px;
+  font-family: Inter;
+  color: black;
+  display: inline-block;
+  width: 2005px;
+  height: 32px;
+}
+.siUnits {
+  top: 751px;
+  left: 165px;
+}
+.scope2Child5,
+.scope2Child6,
+.scope2Child7 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 1170px;
+  left: 639px;
+}
+.scope2Child6,
+.scope2Child7 {
+  top: 1251px;
+  left: 640px;
+}
+.scope2Child7 {
+  top: 1397px;
+  left: 639px;
+  border-radius: 11px;
+  background-color: #fff;
+  border: 1.5px solid #cfcfcf;
+  box-sizing: border-box;
+  width: 421px;
+  height: 65px;
+}
+.siUnits1 {
+  position: absolute;
+  top: 1417px;
+  left: 674px;
+  font-size: 16px;
+  font-family: Inter;
+  color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  width: 195px;
+  height: 32px;
+}
+.scope2Child8 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 1397px;
+  left: 639px;
+}
+.electricityConsumption {
+  margin: 0;
+  position: absolute;
+  top: 804px;
+  left: 158px;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: Montserrat;
+  color: #000;
+  display: inline-block;
+  width: 513px;
+  height: 79px;
+}
+.scope2Child10,
+.scope2Child9 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 1091px;
+  left: 158px;
+}
+.scope2Child10 {
+  top: 1171px;
+}
+.date,
+.energy,
+.facility {
+  margin: 0;
+  position: absolute;
+  top: 1051px;
+  left: 158px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  width: 490px;
+  height: 31px;
+}
+.date,
+.energy {
+  left: 640px;
+}
+.date {
+  top: 1359px;
+}
+.rectangleButton {
+  position: absolute;
+  top: 1397px;
+  left: 1107px;
+}
+.addData,
+.viewData {
+  position: absolute;
+  top: 1416px;
+  left: 1130px;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  width: 165px;
+  height: 27px;
+}
+.viewData {
+  text-decoration: underline;
+  top: 1505px;
+  left: 918px;
+  font-weight: 700;
+  color: #000;
+  width: 174px;
+  height: 59px;
+  cursor: pointer;
+}
+.factoryPollutionCityAirAndIcon {
+  position: absolute;
+  top: 251px;
+  left: 183px;
+  width: 640px;
+  height: 254px;
+  object-fit: cover;
+}
+.dashboard,
+.measure,
+.offset,
+.reduce {
+  text-decoration: underline;
+  position: absolute;
+  top: 53px;
+  left: 461px;
+  font-weight: 600;
+  font-family: Montserrat;
+  color: inherit;
+  display: inline-block;
+  width: 106px;
+  height: 31px;
+}
+.dashboard,
+.offset,
+.reduce {
+  text-decoration: none;
+  left: 645px;
+  color: #000;
+}
+.dashboard,
+.offset {
+  left: 823px;
+}
+.dashboard {
+  left: 983px;
+  width: 140px;
+}
+.scope2 {
+  position: relative;
+  border-radius: 15px;
+  background-color: #f4f6f9;
+  width: 100%;
+  height: 1745px;
+  overflow: auto;
+  text-align: left;
+  font-size: 20px;
+  color: #017846;
+  font-family: Sarabun;
+}
