@@ -200,7 +200,7 @@ let date=(dte.toLocaleDateString());
          <section className="rectangle-section" />
          <Link to="/capital">
          <section className="rectangle-section" />
-         <a className="stationary-c"> Capital Goods</a>
+         <a className="-c"> Capital Goods</a>
 </Link>
          <Link to="/franchise">
          <a className="mobile-combustion">

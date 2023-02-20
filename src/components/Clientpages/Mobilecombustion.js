@@ -404,7 +404,7 @@ if(air==="AirShortHaul"){
 let co2=val
            
             
-let date=(dte.toLocaleDateString());
+let date=Date.parse(dte);
 
             const email=he;
 
@@ -414,7 +414,7 @@ let date=(dte.toLocaleDateString());
 
     
 
-          const data = await fetch("/mcomp", {
+          const data = await fetch("/mobile/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -431,7 +431,7 @@ let date=(dte.toLocaleDateString());
           setCount((c) => c + 1)
 
 
-          if (res.status === 201) {
+          if (data.status === 201) {
               toast.success(" Data saved 😃!", {
                   position: "top-center"
               });

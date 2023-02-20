@@ -87,12 +87,12 @@ const [inpval, setInpval] = useState({
             
 
 
-                let date=(dte.toLocaleDateString());
+                let date=Date.parse(dte);
 
             const email=he;
            
 
-          const data = await fetch("/process", {
+          const data = await fetch("/process/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -109,7 +109,7 @@ const [inpval, setInpval] = useState({
           
 
 
-          if (res.status === 201) {
+          if (data.status === 201) {
               toast.success(" Data saved 😃!", {
                   position: "top-center"
               });

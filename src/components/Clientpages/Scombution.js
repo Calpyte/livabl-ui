@@ -1496,17 +1496,17 @@ else{
             const email=he;
             
           
-            let date=(dte.toLocaleDateString());
+            let date=Date.parse(dte);
 
 
-          const data = await fetch("/scomp", {
+          const data = await fetch("/stationary/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
               },
               body: JSON.stringify({
                   
-                code,facility,quantity,type,weight,fuel,co2,ch4,no2,date,email,person
+                code,facility,quantity,type,weight,fuel,co2,ch4,no2,email,person,date
               })
           });
 
@@ -1516,7 +1516,7 @@ else{
           setCount((c) => c + 1)
 
 
-          if (res.status === 201) {
+          if (data.status === 201) {
               toast.success(" Data saved 😃!", {
                   position: "top-center"
               });

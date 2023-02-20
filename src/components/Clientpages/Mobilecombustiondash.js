@@ -24,15 +24,16 @@ asuser();
   const hellos =async(e)=>{
     const map=he
     
-        const datap = await fetch("/getmobile", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+      //   const datap = await fetch("/getmobile", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+      const datap = await fetch("/mobile/get-all");
       const res = await datap.json();
       
       setTodoss(res);
@@ -185,9 +186,7 @@ let i=0;
         <td  key="{quantt}">{todo.category}</td>
         <td  key="{quantt}">{todo.subcat}</td>
         <td  key="{quntit}">{todo.air}</td>
-       
- 
-        <td  key="{quantt">{todo.date}</td>
+        <td  key="{quantt">{todo.mobileDateStr}</td>
         <td  key="{qtt}">{Math.round(todo.co2)}</td>
     
         </tr>

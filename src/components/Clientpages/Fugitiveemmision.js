@@ -370,11 +370,11 @@ let val=0
 
 const email=he;
 
-let date=(dte.toLocaleDateString());
+let date=Date.parse(dte);
 
 
 let co2=val
-          const data = await fetch("/fug", {
+          const data = await fetch("/fugitive/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -390,7 +390,7 @@ let co2=val
           setCount((c) => c + 1)
 
 
-          if (res.status === 201) {
+          if (data.status === 201) {
               toast.success(" Data saved 😃!", {
                   position: "top-center"
               });
