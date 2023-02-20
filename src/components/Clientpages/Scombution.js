@@ -374,8 +374,9 @@ const addCompanydata = async (e) => {
   let ch4=val[1]
   let no2=val[2]
   const email=he;
-  let date=(dte.toLocaleDateString());
-  const data = await fetch("/scomp", {
+  let date=Date.parse(dte);
+  // let date=(dte.toLocaleDateString());
+  const data = await fetch("stationary/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -385,9 +386,9 @@ const addCompanydata = async (e) => {
               })
           });
           const res = await data.json();
-          console.log(weight)
+          // console.log(weight)
           setCount((c) => c + 1)
-          if (res.status === 201) {
+          if (data.status === 201) {
               toast.success(" Data saved 😃!", {
                   position: "top-center"
               });

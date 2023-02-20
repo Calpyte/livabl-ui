@@ -225,7 +225,7 @@ asuser();
  }
  useEffect(() => {
  
-  hellos();
+  // hellos();
 setCalculation(() => count * 2);
 }, [count]);
 
