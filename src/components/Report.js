@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import "./Profile.css"
 
  
-const api_base = 'http://localhost:3000';
+const api_base = 'http://localhost:8080/master';
 const renderTooltip = context => {
   const { category, value } = context.point || context;
   

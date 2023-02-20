@@ -304,15 +304,6 @@ function App() {
       <Route path="/subcapdash" element={<SubCapdash/>}/>
       <Route path="/subMain" element={<SubMainpage/>}/>
 
-                       
-
-              
-
-
-
-
-
-            
 
             </Routes>
             

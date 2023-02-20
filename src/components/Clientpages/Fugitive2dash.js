@@ -149,10 +149,6 @@ let i=0;
       <a className="dashboard">Dashboard</a>        </Link>
       <table class="infooo">
 
-	
-
-
-
 <thead>
   <tr>
     <th>S.NO</th>

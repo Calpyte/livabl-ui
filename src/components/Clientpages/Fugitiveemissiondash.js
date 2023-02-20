@@ -23,15 +23,16 @@ asuser();
   }, [navigate]);
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/fugdash", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+      //   const datap = await fetch("/fugdash", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+      const datap = await fetch("/fugitive/get-all");
       const res = await datap.json();
       
       setTodoss(res);
@@ -180,7 +181,7 @@ let i=0;
         <td  key="{quantit}">{todo.code}</td>
         <td  key="{quantity">{todo.refrigerant}</td>
         <td  key="{quantit}">{todo.refrigeration}</td>
-        <td  key="quantity">{todo.date}</td>
+        <td  key="quantity">{todo.fugitiveDateStr}</td>
         <td  key="{quantt}">{todo.i}</td>
         <td  key="{quantit}">{todo.f}</td>
         <td  key="quantity">{todo.g}</td>

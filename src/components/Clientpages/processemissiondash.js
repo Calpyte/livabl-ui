@@ -21,15 +21,17 @@ asuser();
   }, [navigate]);
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/getprocess", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+      //   const datap = await fetch("/getprocess", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+
+      const datap = await fetch("/process/get-all");
       const res = await datap.json();
       
       setTodoss(res);
@@ -169,7 +171,7 @@ let i=0;
         <td  key="{quantity">{todo.code}</td>
         <td  key="{quantit}">{todo.quantity}</td>
         <td  key="quantity">{todo.fuel}</td>
-        <td  key="{quantt}">{todo.date}</td>
+        <td  key="{quantt}">{todo.processDateStr}</td>
        
     
         </tr>

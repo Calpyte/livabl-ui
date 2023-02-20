@@ -149,7 +149,7 @@ asuser();
     
     
     
-                let date=(dte.toLocaleDateString());
+                let date=Date.parse(dte);
     
     
               const data = await fetch("/energy", {
@@ -169,7 +169,7 @@ asuser();
               
     
     
-              if (res.status === 201) {
+              if (data.status === 201) {
                   toast.success(" Data saved 😃!", {
                       position: "top-center"
                   });

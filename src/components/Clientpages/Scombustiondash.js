@@ -13,26 +13,20 @@ const Home1View = () => {
   const { logindata } = useContext(LoginContext);
   
   let he="hello"
-const asuser = async()=>{he=(logindata.ValidUserOne.map)}
+// const asuser = async()=>{he=(logindata.ValidUserOne.map)}
 
-asuser();
+// asuser();
 
   const navigate = useNavigate();
 
   const onAddDataClick = useCallback(() => {
     navigate("/home");
   }, [navigate]);
+
+
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/getstation", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+        const datap = await fetch("/stationary/get-all");
       const res = await datap.json();
       
       setTodoss(res);
@@ -49,6 +43,8 @@ asuser();
   hellos();
 setCalculation(() => count * 2);
 }, [count]);
+
+
 let i=0;
 
   return (
@@ -175,7 +171,7 @@ let i=0;
         <td  key="{quantity">{todo.fuel}</td>
         <td  key="{quantit}">{todo.quantity}</td>
         <td  key="quantity">{todo.type}</td>
-        <td  key="{quantt}">{todo.date}</td>
+        <td  key="{quantt}">{todo.combustionDateStr}</td>
         <td  key="{quantt}">{Math.round(todo.co2)}</td>
     
         </tr>
