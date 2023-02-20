@@ -23,15 +23,17 @@ asuser();
   }, [navigate]);
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/capdash", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+        //const datap = await fetch("/capdash", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+
+      const datap = await fetch("/capital-goods/get-all")
       const res = await datap.json();
       
       setTodoss(res);
@@ -195,7 +197,7 @@ let i=0;
         <td  key="14">{todo.employeecode}</td>
         <td  key="15">{todo.employeename}</td>
         <td  key="16">{todo.energy}</td>
-        <td  key="17">{todo.date}</td>
+        <td  key="17">{todo.capitalDateStr}</td>
     
     
         </tr>

@@ -89,10 +89,10 @@ const [inpval, setInpval] = useState({
               });}else{
 //calculation
 const email=he;
-let date=(dte.toLocaleDateString());
+let date=Date.parse(dte);
 
 
-          const data = await fetch("/cap", {
+          const data = await fetch("/capital-goods/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -110,7 +110,7 @@ quantity,material,distance,vehicle,transport,facility,byerlocation,byername,code
           
           setCount((c) => c + 1)
 
-          if (res.status === 201) {
+          if (data.status === 201) {
               toast.success(" Data saved 😃!", {
                   position: "top-center"
               });

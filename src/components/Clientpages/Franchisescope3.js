@@ -85,9 +85,9 @@ const addCompanydata = async (e) => {
             }else{
 
       const email=he;
-      let date=(dte.toLocaleDateString());
+      let date=Date.parse(dte);
 
-        const data = await fetch("/franchise", {
+        const data = await fetch("/franchise/save", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -102,7 +102,7 @@ const addCompanydata = async (e) => {
         
 
 
-        if (res.status === 201) {
+        if (data.status === 201) {
             toast.success(" Data saved 😃!", {
                 position: "top-center"
             });
@@ -121,15 +121,16 @@ const addCompanydata = async (e) => {
 }}
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/franchisedash", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+      //   const datap = await fetch("/franchisedash", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+      const datap = await fetch("/franchise/save")
       const res = await datap.json();
       
       setTodoss(res);

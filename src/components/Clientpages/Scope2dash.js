@@ -10,9 +10,9 @@ const Home1View = () => {
   const { logindata } = useContext(LoginContext);
   
   let he="hello"
-const asuser = async()=>{he=(logindata.ValidUserOne.map)}
+// const asuser = async()=>{he=(logindata.ValidUserOne.map)}
 
-asuser();
+// asuser();
 
   const navigate = useNavigate();
 
@@ -21,15 +21,16 @@ asuser();
   }, [navigate]);
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/energydash", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+      //   const datap = await fetch("/electricity/get-all", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+      const datap = await fetch("/electricity/get-all");
       const res = await datap.json();
       
       setTodoss(res);
@@ -152,7 +153,7 @@ let i=0;
         <td  key="{quantity">{todo.code}</td>
         <td  key="quantity">{todo.fuel}</td>
         <td  key="{quantit}">{todo.quantity}</td>
-        <td  key="{quantt">{todo.date}</td>
+        <td  key="{quantt">{todo.electricityDateStr}</td>
         <td  key="{qtt}">{Math.round(todo.co2)}</td>
     
         </tr>
