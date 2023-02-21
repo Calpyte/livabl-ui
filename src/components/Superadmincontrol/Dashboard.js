@@ -60,7 +60,6 @@ const Dashboard = () => {
               console.log("user verify");
               setLoginData(data)
               history("/dash");
-              
             }else if(sdata.status == 201){
               console.log("user verify");
               setLoginData(sdata)
@@ -70,8 +69,7 @@ const Dashboard = () => {
               setLoginData(adata)
               history("/superdash");
             }  else {
-             
-              //  history("/")
+               history("/")
             }
     }
 

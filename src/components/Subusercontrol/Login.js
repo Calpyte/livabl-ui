@@ -52,7 +52,7 @@ const Subuserlogin = () => {
             // console.log("user login succesfully done");
 
 
-            const data = await fetch("/subuserlogin",{
+            const data = await fetch("/subuser/login",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -64,9 +64,9 @@ const Subuserlogin = () => {
 
             const res = await data.json();
             //  
-
-            if(res.status === 201){
-                localStorage.setItem("susersdatatoken",res.result.token);
+             
+            if(data.status === 201){
+                localStorage.setItem("susersdatatoken",res.token);
                 history("/subdash")
                 setInpval({...inpval,email:"",password:""});
             }else{
