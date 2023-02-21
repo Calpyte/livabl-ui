@@ -235,7 +235,7 @@ const mail = async(e)=>{
         
       }else{
 
-        const data = await fetch("/mail", {
+        const data = await fetch("/message/save", {
           method: "POST",
           headers: {
               "Content-Type": "application/json"
@@ -250,7 +250,7 @@ const mail = async(e)=>{
       const res = await data.json();
       
 
-      if (res.status === 201) {
+      if (data.status === 201) {
         toast.success(" Email sent 😃!", {
             position: "top-center"
         });
