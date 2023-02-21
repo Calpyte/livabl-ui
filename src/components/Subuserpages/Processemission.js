@@ -160,7 +160,7 @@ const map=he
 
 useEffect(() => {
  
-  hellos();
+  // hellos();
 setCalculation(() => count * 2);
 }, [count]);
 

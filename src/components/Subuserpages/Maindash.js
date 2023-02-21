@@ -194,7 +194,7 @@ let total=  element+element1+element2+element3+element4
       hellos1();
       hellos2();
       hellos3();
-      hellos4();
+      // hellos4();
       
 
     }, []);
