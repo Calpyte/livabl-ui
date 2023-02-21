@@ -80,16 +80,12 @@ asuser();
             }
           });
             const adata = await ares.json();
-      ////////////////////////////////////////////
-
-
-     
+      //////////////////////////////////////////
 
             if (res.status === 201 ) {
               console.log("user verify");
               setLoginData(data)
               history("/dash");
-              
             }else if(sres.status == 201){
               console.log("user verify");
               setLoginData(sdata)
