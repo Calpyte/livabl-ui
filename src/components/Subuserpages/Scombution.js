@@ -1565,7 +1565,6 @@ const map=he
     
   }
 
-  hellos();
   const navigate = useNavigate();
   const onAddDataClick = useCallback(() => {
     navigate("/subhomeview");
@@ -1573,7 +1572,7 @@ const map=he
 
 useEffect(() => {
  
-  hellos();
+  // hellos();
 setCalculation(() => count * 2);
 }, [count]);
 

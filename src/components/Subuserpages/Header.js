@@ -21,78 +21,25 @@ const Header = () => {
         setAnchorEl(null);
     };
 
-
-    const logoutuser = async () => {
-        let token = localStorage.getItem("usersdatatoken");
-        let stoken = localStorage.getItem("susersdatatoken");
-        let atoken = localStorage.getItem("ausersdatatoken");
-        localStorage.removeItem("usersdatatoken");
-        localStorage.removeItem("susersdatatoken");
-        localStorage.removeItem("ausersdatatoken");
-        console.log("you logout");
-        setLoginData(false)
-        history("/");
-
-
-    //     const res = await fetch("/logout", {
-    //         method: "GET",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             "Authorization": token,
-    //             Accept: "application/json"
-    //         },
-    //         credentials: "include"
-    //     });
-
-    //     const data = await res.json();
-    //    //subuser
-       
-    //    const sres = await fetch("/subuserlogout", {
-    //     method: "GET",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //         "Authorization": stoken,
-    //         Accept: "application/json"
-    //     },
-    //     credentials: "include"
-    // });
-
-    // const sdata = await sres.json();
-    // //sadmin
     
-    // const ares = await fetch("/superlogout", {
-    //     method: "GET",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //         "Authorization": atoken,
-    //         Accept: "application/json"
-    //     },
-    //     credentials: "include"
-    // });
-
-    // const adata = await ares.json();
-
-    //     if (data.status === 201) {
-    //         console.log("you logout");
-    //         localStorage.removeItem("usersdatatoken");
-    //         setLoginData(false)
-    //         history("/");
-    //     }
-    //     else if(sdata.status === 201){
-    //         console.log("you logout");
-    //         localStorage.removeItem("susersdatatoken");
-    //         setLoginData(false)
-    //         history("/");
-    //     } 
-    //     else if(adata.status === 201){
-    //         console.log("you logout");
-    //         localStorage.removeItem("ausersdatatoken");
-    //         setLoginData(false)
-    //         history("/");
-    //     }else {
-    //         console.log("error");
-    //     }
+    const logoutuser = async () => {
+        let stoken = localStorage.getItem("susersdatatoken");
+       const sres = await fetch("/subuser/logout", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": stoken,
+            Accept: "application/json"
+        },
+        credentials: "include"
+    });
+    localStorage.removeItem("usersdatatoken");
+    localStorage.removeItem("susersdatatoken");
+    localStorage.removeItem("ausersdatatoken");
+    setLoginData(false)
+    history("/");
     }
+
 
     const goDash = () => {
         history("/profile")
