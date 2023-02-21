@@ -419,9 +419,9 @@ const map=he
       })
   });
   const res = await datap.json();
-  
   setTodoss(res);
   }
+  
   let element = 0 ;
 
   for (let index = 0; index < usrs.length; index++) {

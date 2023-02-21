@@ -156,21 +156,16 @@ function App() {
     });
       const adata = await ares.json();
       ///////////////////////////////
-
-
-
-    if (data.status === 201 ) {
+    if (res.status === 201 ) {
       console.log("user verify");
     setLoginData(data)
    history("/dash")
-        
-      
-    }else if(sdata.status == 201){
+    }else if(sres.status == 201){
       console.log("user verify");
        setLoginData(sdata)
       history("/subdash");
       console.log("sub user");
-    }else if(adata.status == 201){
+    }else if(ares.status == 201){
       console.log("user verify");
       setLoginData(adata)
       history("/superdash");

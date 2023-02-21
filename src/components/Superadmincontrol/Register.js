@@ -73,7 +73,7 @@ const Superregister = () => {
             // console.log("user registration succesfully done");
 
 
-            const data = await fetch("/superregister", {
+            const data = await fetch("/admin/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -86,7 +86,7 @@ const Superregister = () => {
             const res = await data.json();
             // console.log(res.status);
 
-            if (res.status === 201) {
+            if (data.status === 201) {
                 toast.success("Registration Successfully done 😃!", {
                     position: "top-center"
                 });
