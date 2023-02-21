@@ -85,9 +85,9 @@ productname2:"",disposal:"",lease:"",namefranchise:"",location:""
 // //calculation
 
 const email=he;
-let date=(dte.toLocaleDateString());
+let date=Date.parse(dte);
 
-          const data = await fetch("/downstream", {
+          const data = await fetch("/downstream/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -105,7 +105,7 @@ let date=(dte.toLocaleDateString());
           setCount((c) => c + 1)
 
 
-          if (res.status === 201) {
+          if (data.status === 201) {
               toast.success(" Data saved 😃!", {
                   position: "top-center"
               });
@@ -127,7 +127,7 @@ let date=(dte.toLocaleDateString());
   }
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/downdash", {
+        const datap = await fetch("/downstream/save" ,{
           method: "POST",
           headers: {
               "Content-Type": "application/json"

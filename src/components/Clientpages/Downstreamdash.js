@@ -23,15 +23,16 @@ asuser();
   }, [navigate]);
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/downdash", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+      //   const datap = await fetch("/downdash", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+      const datap = await fetch("/downstream/save");
       const res = await datap.json();
       
       setTodoss(res);
@@ -182,7 +183,7 @@ let i=0;
         <td  key="{quantit}">{todo.quantity}</td>
      
     
-        <td  key="quantity">{todo.date}</td>
+        <td  key="quantity">{todo.downstreamDateStr}</td>
     
     
         </tr>
