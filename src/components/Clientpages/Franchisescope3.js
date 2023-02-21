@@ -130,7 +130,7 @@ const addCompanydata = async (e) => {
       //          map
       //     })
       // });
-      const datap = await fetch("/franchise/save")
+      const datap = await fetch("/franchise/get-all")
       const res = await datap.json();
       
       setTodoss(res);

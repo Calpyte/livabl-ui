@@ -39,13 +39,12 @@ const Home1View = () => {
       let element=0;
   for (let index = 0; index < usrs.length; index++) {
 
-
     element += (usrs[index].co2)
 
  }
  useEffect(() => {
  
-  hellos();
+hellos();
 setCalculation(() => count * 2);
 }, [count]);
 let i=0;

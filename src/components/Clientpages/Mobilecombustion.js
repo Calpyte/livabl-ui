@@ -405,15 +405,7 @@ let co2=val
            
             
 let date=Date.parse(dte);
-
-            const email=he;
-
-
-
-
-
-    
-
+          const email=he;
           const data = await fetch("/mobile/save", {
               method: "POST",
               headers: {
@@ -458,14 +450,14 @@ let date=Date.parse(dte);
   
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/getmobile", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
+        const datap = await fetch("/mobile/get-all", {
+          method: "GET",
+          // headers: {
+          //     "Content-Type": "application/json"
+          // },
+          // body: JSON.stringify({
+          //      map
+          // })
       });
       const res = await datap.json();
       

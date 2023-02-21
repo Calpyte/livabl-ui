@@ -21,6 +21,8 @@ asuser();
   const onAddDataClick = useCallback(() => {
     navigate("/fug");
   }, [navigate]);
+
+
   const hellos =async(e)=>{
     const map=he
       //   const datap = await fetch("/downdash", {
@@ -32,17 +34,14 @@ asuser();
       //          map
       //     })
       // });
-      const datap = await fetch("/downstream/save");
+      const datap = await fetch("/downstream/get-all");
       const res = await datap.json();
       
       setTodoss(res);
       }
       let element=0;
   for (let index = 0; index < usrs.length; index++) {
-
-
     element += (usrs[index].co2)
-  
  }
  useEffect(() => {
  

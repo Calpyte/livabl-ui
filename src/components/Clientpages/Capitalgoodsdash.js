@@ -35,7 +35,6 @@ asuser();
 
       const datap = await fetch("/capital-goods/get-all")
       const res = await datap.json();
-      
       setTodoss(res);
       }
       let element=0;

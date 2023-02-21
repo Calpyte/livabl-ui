@@ -23,14 +23,14 @@ asuser();
   }, [navigate]);
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/upstreamdash", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
+        const datap = await fetch("/upstream/get-all", {
+          method: "GET",
+          // headers: {
+          //     "Content-Type": "application/json"
+          // },
+          // body: JSON.stringify({
+          //      map
+          // })
       });
       const res = await datap.json();
       

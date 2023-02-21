@@ -189,7 +189,6 @@ let total=  element+element1+element2+element3+element4
 
     
     useEffect(() => {
-     
       hellos();
       hellos1();
       hellos2();

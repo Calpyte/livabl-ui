@@ -415,14 +415,14 @@ let co2=val
   
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/fugdash", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
+        const datap = await fetch("/fugitive/get-all", {
+          method: "GET",
+        //   headers: {
+        //       "Content-Type": "application/json"
+        //   },
+        //   body: JSON.stringify({
+        //        map
+        //   })
       });
       const res = await datap.json();
       
