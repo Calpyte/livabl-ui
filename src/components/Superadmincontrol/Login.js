@@ -52,7 +52,7 @@ const Superlogin = () => {
             // console.log("user login succesfully done");
 
 
-            const data = await fetch("/superlogin",{
+            const data = await fetch("/admin/login",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -65,8 +65,8 @@ const Superlogin = () => {
             const res = await data.json();
             //  
 
-            if(res.status === 201){
-                localStorage.setItem("ausersdatatoken",res.result.token);
+            if(data.status === 201){
+                localStorage.setItem("ausersdatatoken",res.token);
                 history("/superdash")
                 setInpval({...inpval,email:"",password:""});
             }else{

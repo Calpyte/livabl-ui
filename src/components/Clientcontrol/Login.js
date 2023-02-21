@@ -75,10 +75,8 @@ const Login = () => {
             });
 
             const res = await data.json();
-            //  
-
             if(data.status === 201){
-                // localStorage.setItem("usersdatatoken",res.result.token);
+                localStorage.setItem("usersdatatoken",res.token);
                 history("/dash")
                 setInpval({...inpval,email:"",password:""});
             }else{
