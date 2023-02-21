@@ -23,15 +23,16 @@ asuser();
   }, [navigate]);
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/franchisedash", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+      //   const datap = await fetch("/franchisedash", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+      const datap = await fetch("/franchise/get-all");
       const res = await datap.json();
       
       setTodoss(res);
@@ -184,7 +185,7 @@ let i=0;
         <td  key="quantity">{todo.asset}</td>
         <td  key="{quantt}">{todo.period}</td>
         <td  key="{quantt}">{todo.person}</td>
-        <td  key="quantity">{todo.date}</td>
+        <td  key="quantity">{todo.franchiseDateStr}</td>
     
     
         </tr>

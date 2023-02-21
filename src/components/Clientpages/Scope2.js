@@ -152,7 +152,7 @@ asuser();
                 let date=Date.parse(dte);
     
     
-              const data = await fetch("/energy", {
+              const data = await fetch("/electricity/save", {
                   method: "POST",
                   headers: {
                       "Content-Type": "application/json"
@@ -202,15 +202,16 @@ asuser();
   }, [navigate]);
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/energydash", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+      //   const datap = await fetch("/energydash", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+      const datap = await fetch("/electricity/save")
       const res = await datap.json();
       
       setTodoss(res);
