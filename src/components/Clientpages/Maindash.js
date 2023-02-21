@@ -29,7 +29,6 @@ function Recommendation(){
   });
 
   const [usrs, setTodoss] = useState([]);
-
   const [usrs1, setTodos1] = useState([]);
   const [usrs2, setTodos2] = useState([]);
   const [usrs3, setTodos3] = useState([]);
@@ -41,26 +40,24 @@ function Recommendation(){
 
 
 const { logindata } = useContext(LoginContext);
-
 let he="hello"
 let person="hello"
 const asuser = async()=>{he=(logindata.ValidUserOne.map);
-person=(logindata.ValidUserOne.fname)}
-
+person=(logindata.fname)}
 asuser();
 
 
 
 const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/getmobile", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
+        const datap = await fetch("/mobile/get-all", {
+          method: "GET",
+          // headers: {
+          //     "Content-Type": "application/json"
+          // },
+          // body: JSON.stringify({
+          //      map
+          // })
       });
       const res = await datap.json();
       
@@ -79,14 +76,14 @@ const hellos =async(e)=>{
 
     const hellos1 =async(e)=>{
       const map=he
-          const datap = await fetch("/fugdash", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                 map
-            })
+          const datap = await fetch("/fugitive/get-all", {
+            method: "GET",
+            // headers: {
+            //     "Content-Type": "application/json"
+            // },
+            // body: JSON.stringify({
+            //      map
+            // })
         });
         const res = await datap.json();
         
@@ -129,14 +126,14 @@ const hellos =async(e)=>{
         /////////////////////////////////////////
         const hellos3 =async(e)=>{
           const map=he
-              const datap = await fetch("/energydash", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                     map
-                })
+              const datap = await fetch("/electricity/get-all", {
+                method: "GET",
+                // headers: {
+                //     "Content-Type": "application/json"
+                // },
+                // body: JSON.stringify({
+                //      map
+                // })
             });
             const res = await datap.json();
             
@@ -153,14 +150,14 @@ const hellos =async(e)=>{
             ///////////////////////////////////////
             const hellos4 =async(e)=>{
               const map=he
-                  const sdatap = await fetch("/getstation", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                         map
-                    })
+                  const sdatap = await fetch("/stationary/get-all", {
+                    method: "GET",
+                    // headers: {
+                    //     "Content-Type": "application/json"
+                    // },
+                    // body: JSON.stringify({
+                    //      map
+                    // })
                 });
                 const sres = await sdatap.json();
                 
@@ -194,9 +191,8 @@ let total=  element+element1+element2+element3+element4
       hellos2();
       hellos3();
       hellos4();
-      
-
     }, []);
+
     var data = [
       {name: 'Mobile Combustion', students: Math.round(element), fill: 'red'},
       {name: 'NO DATA', students: 0.001, fill: 'grey'},

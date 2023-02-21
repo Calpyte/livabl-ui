@@ -106,8 +106,6 @@ quantity,material,distance,vehicle,transport,facility,byerlocation,byername,code
 
           const res = await data.json();
           
-
-          
           setCount((c) => c + 1)
 
           if (data.status === 201) {
