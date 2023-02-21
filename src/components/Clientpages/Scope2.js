@@ -114,15 +114,10 @@ asuser();
     }
     
     
-    
-    
-          
                     
     let val="null"
     
-    
-    
-    
+  
     
       if(fuel==="igp"){
      val =igps(inpval.quantity)}
@@ -141,10 +136,8 @@ asuser();
       console.log("errr");
     }
     
-    
                 let co2=val
                
-                
     let email=he
     
     
@@ -165,10 +158,6 @@ asuser();
     
               const res = await data.json();
               
-              
-              
-    
-    
               if (data.status === 201) {
                   toast.success(" Data saved 😃!", {
                       position: "top-center"
@@ -200,23 +189,15 @@ asuser();
     // Please sync "Stationary combustion dash" to the project
     navigate("/scodash");
   }, [navigate]);
+
   const hellos =async(e)=>{
-    const map=he
-      //   const datap = await fetch("/energydash", {
-      //     method: "POST",
-      //     headers: {
-      //         "Content-Type": "application/json"
-      //     },
-      //     body: JSON.stringify({
-      //          map
-      //     })
-      // });
-      const datap = await fetch("/electricity/save")
+      const map=he
+      const datap = await fetch("/electricity/get-all");
       const res = await datap.json();
-      
       setTodoss(res);
-      setCount((c) => c + 1) 
+      // setCount((c) => c + 1) 
       }
+
       let element=0;
   for (let index = 0; index < usrs.length; index++) {
 
@@ -226,7 +207,7 @@ asuser();
  }
  useEffect(() => {
  
-  // hellos();
+  hellos();
 setCalculation(() => count * 2);
 }, [count]);
 

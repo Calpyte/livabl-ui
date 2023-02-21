@@ -130,14 +130,14 @@ quantity,material,distance,vehicle,transport,facility,byerlocation,byername,code
   
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/fugdash", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
+        const datap = await fetch("/capital-goods/get-all", {
+          method: "GET",
+          // headers: {
+          //     "Content-Type": "application/json"
+          // },
+          // body: JSON.stringify({
+          //      map
+          // })
       });
       const res = await datap.json();
       

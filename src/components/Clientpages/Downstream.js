@@ -102,7 +102,7 @@ let date=Date.parse(dte);
           const res = await data.json();
           
 
-          setCount((c) => c + 1)
+          // setCount((c) => c + 1)
 
 
           if (data.status === 201) {
@@ -127,14 +127,14 @@ let date=Date.parse(dte);
   }
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/downstream/save" ,{
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
+        const datap = await fetch("/downstream/get-all" ,{
+          method: "GET",
+          // headers: {
+          //     "Content-Type": "application/json"
+          // },
+          // body: JSON.stringify({
+          //      map
+          // })
       });
       const res = await datap.json();
       

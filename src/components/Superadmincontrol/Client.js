@@ -18,7 +18,7 @@ const Scomp = () =>{
   const { logindata } = useContext(LoginContext);
   
   let he="hello"
-const asuser = async()=>{he=(logindata.ValidUserOne.email)}
+const asuser = async()=>{he=(logindata.email)}
 
 asuser();
 
@@ -86,16 +86,10 @@ const [inpval, setInpval] = useState({
                 position: "top-center"
             });
             }else{
-          
-            
-
-
-             
 
             const eemail=he;
-            
-
-          const data = await fetch("/adminaddusr", {
+          
+          const data = await fetch("/client/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -112,7 +106,7 @@ const [inpval, setInpval] = useState({
           
 
 
-          if (res.status === 201) {
+          if (data.status === 201) {
               toast.success(" User Added 😃!", {
                   position: "top-center"
               });
@@ -132,7 +126,7 @@ const [inpval, setInpval] = useState({
   const hellos =async(e)=>{
 const eemail=he
 
-    const datap = await fetch("/clist", {
+    const datap = await fetch("/client/get-all", {
       method: "GET",
       headers: {
           "Content-Type": "application/json"
@@ -173,7 +167,7 @@ const eemail=he
 
 
 
-        const data = await fetch("/adminremusr", {
+        const data = await fetch("/client/update", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -188,7 +182,7 @@ const eemail=he
         
         setCount((c) => c + 1)
 
-        if (res.status === 201) {
+        if (data.status === 201) {
             toast.success(" Data saved 😃!", {
                 position: "top-center"
             });

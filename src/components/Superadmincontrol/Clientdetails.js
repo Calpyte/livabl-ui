@@ -21,7 +21,7 @@ const Scomp = () =>{
   const hellos =async(e)=>{
 
 
-    const datap = await fetch("/clientp", {
+    const datap = await fetch("/client/get-all", {
       method: "GET",
       headers: {
           "Content-Type": "application/json"

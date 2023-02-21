@@ -409,19 +409,13 @@ const addCompanydata = async (e) => {
 
   const hellos =async(e)=>{
 const map=he
-    const datap = await fetch("/getstation", {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-           map
-      })
+    const datap = await fetch("/stationary/get-all", {
+      method: "GET"
   });
   const res = await datap.json();
   setTodoss(res);
   }
-  
+
   let element = 0 ;
 
   for (let index = 0; index < usrs.length; index++) {
@@ -439,7 +433,7 @@ const map=he
 
 useEffect(() => {
  
-  // hellos();
+  hellos();
 setCalculation(() => count * 2);
 }, [count]);
 

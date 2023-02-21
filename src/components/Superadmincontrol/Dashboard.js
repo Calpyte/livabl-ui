@@ -54,8 +54,6 @@ const Dashboard = () => {
             }
           });
             const adata = await ares.json();
-      
-
             if (res.status == 201 ) {
               console.log("user verify");
               setLoginData(data)

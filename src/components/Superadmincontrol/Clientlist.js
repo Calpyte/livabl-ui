@@ -130,7 +130,7 @@ const [inpval, setInpval] = useState({
   const hellos =async(e)=>{
 const eemail=he
 
-    const datap = await fetch("/clist", {
+    const datap = await fetch("/client/get-all", {
       method: "GET",
       headers: {
           "Content-Type": "application/json"

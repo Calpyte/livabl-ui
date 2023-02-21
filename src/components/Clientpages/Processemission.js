@@ -130,14 +130,14 @@ const [inpval, setInpval] = useState({
   }}
   const hellos =async(e)=>{
 const map=he
-    const datap = await fetch("/getstation", {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-           map
-      })
+    const datap = await fetch("/process/get-all", {
+      method: "GET",
+      // headers: {
+      //     "Content-Type": "application/json"
+      // },
+      // body: JSON.stringify({
+      //      map
+      // })
   });
   const res = await datap.json();
   
@@ -160,7 +160,7 @@ const map=he
 
 useEffect(() => {
  
-  hellos();
+  // hellos();
 setCalculation(() => count * 2);
 }, [count]);
 
