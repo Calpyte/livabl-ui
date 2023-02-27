@@ -651,8 +651,8 @@ let vall=null
             let co2=val
             let co3=vall
             const email=he;
-            let date=(dte.toLocaleDateString()); 
-          const data = await fetch("/fugitive2", {
+            let date=Date.parse(dte); 
+          const data = await fetch("/fugitive/fugitive-gases", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -665,7 +665,7 @@ let vall=null
           const res = await data.json();
           
           setCount((c) => c + 1)
-                if (res.status === 201) {
+                if (data.status === 201) {
               toast.success(" Data saved 😃!", {
                   position: "top-center"
               });

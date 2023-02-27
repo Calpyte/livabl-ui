@@ -24,15 +24,16 @@ asuser();
 
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/fugdashtwo", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+      //   const datap = await fetch("/fugdashtwo", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+      const datap = await fetch("/fugitive/fugitive-get-all")
       const res = await datap.json();
       
       setTodoss(res);
@@ -186,7 +187,7 @@ let i=0;
         <td  key="quantity">{todo.quantity}</td>
         <td  key="{quantt}">{todo.yesno}</td>
         <td  key="{quantt}">{todo.person}</td>
-        <td  key="quantity">{todo.date}</td>
+        <td  key="quantity">{todo.fugitiveGasDateStr}</td>
         <td  key="quantity">{todo.co2}</td>
     
     

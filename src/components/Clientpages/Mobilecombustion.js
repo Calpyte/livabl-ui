@@ -16,7 +16,111 @@ const Mcomp = () =>{
     const [count, setCount] = useState(0);
     const [calculation, setCalculation] = useState(0);
     const { logindata } = useContext(LoginContext);
-    
+    const cdata ={
+      "JetFuel":{
+        "co2": 2.49
+      },
+      "AviationGasoline":{
+        "co2": 2.2
+      },
+      "OnRoadDieselFuel":{
+        "co2": 2.67
+      },
+      "GasolinePetrol":{
+        "co2": 2.27
+      },
+      "ResidualFuelOil":{
+        "co2": 2.93
+      },
+      "LPG":{
+        "co2": 1.61
+      },
+      "LNG":{
+        "co2": 1.17
+      },
+      "CNG":{
+        "co2": 0.053
+      },
+      "Ethanol":{
+        "co2": 1.46
+      },
+      "Biodiesel":{
+        "co2": 2.49
+      },
+      "EthanolGasoline":{
+        "co2": 0.34
+      },
+      "BiodieselDiesel":{
+        "co2": 2.14
+      },
+      "HeavygoodsvehicleEthanol":{
+        "co2": 0.93
+      },
+      "HeavygoodsvehicleDiesel":{
+        "co2": 0.71
+      },
+      "HeavygoodsvehicleLPG":{
+        "co2": 0.42
+      },
+      "HeavygoodsvehicleLPG":{
+        "co2": 0.42
+      },
+      "LightgoodsvehicleDiesel":{
+        "co2": 0.38
+      },
+      "LightgoodsvehiclePetrol":{
+        "co2": 0.32
+      },
+      "LightgoodsvehicleEthanol":{
+        "co2": 0.32
+      },
+      "LightgoodsvehicleCNG":{
+        "co2": 0.22
+      },
+      "CarDiesel":{
+        "co2": 0.27
+      },
+      "CarPetrol":{
+        "co2": 0.23
+      },
+      "BusGasoline":{
+        "co2": 1.06
+      },
+      "BusEthanol":{
+        "co2": 0.69
+      },
+      "BusDiesel":{
+        "co2": 1.69
+      },
+      "AirLongHaul":{
+        "co2": 0.61
+      },
+      "Rail":{
+        "co2": 0.02
+      },
+      "Shipping":{
+        "co2": 0.0528
+      },
+      "Road":{
+        "co2": 0.3267
+      },
+      "AirShortHaul":{
+        "co2": 1.47
+      },
+      "AirDomestic":{
+        "co2": 1.96
+      },
+    }
+
+    // function getValue(quantity,input,weight){
+    //   if(type === "kg") return [calc*(chemicaldata["co2"]/1000)];
+    //   else return [calc*(chemicaldata["co2"])];
+    // }  
+
+    // let val=["null","null","null"];
+    // val = getValue(inpval.quantity,cdata[fuel],weight);
+    // let c02 = [0];
+
     let he="hello"
     let person="hello"
     const asuser = async()=>{he=(logindata.ValidUserOne.map);
