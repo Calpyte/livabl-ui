@@ -4,6 +4,7 @@ import "./Home1View.css";
 import { LoginContext } from "../ContextProvider/Context";
 
 import Header from './Header';
+import environment from "../../Environment";
 
 
 const Home1View = () => {
@@ -26,7 +27,7 @@ const Home1View = () => {
 
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/stationary/get-all");
+        const datap = await fetch(environment.baseUrl + "/stationary/get-all");
       const res = await datap.json();
       
       setTodoss(res);

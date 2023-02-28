@@ -9,6 +9,8 @@ import { LoginContext } from "../ContextProvider/Context";
 import "./Home1Add.css";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
+import environment from "../../Environment";
+
 const Scomp = () =>{
   const [dte, onChange] = useState(new Date());
   const [usrs, setTodoss] = useState([]);
@@ -92,7 +94,7 @@ const [inpval, setInpval] = useState({
             const email=he;
            
 
-          const data = await fetch("/process/save", {
+          const data = await fetch(environment.baseUrl + "/process/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -130,7 +132,7 @@ const [inpval, setInpval] = useState({
   }}
   const hellos =async(e)=>{
 const map=he
-    const datap = await fetch("/process/get-all", {
+    const datap = await fetch(environment.baseUrl + "/process/get-all", {
       method: "GET",
       // headers: {
       //     "Content-Type": "application/json"

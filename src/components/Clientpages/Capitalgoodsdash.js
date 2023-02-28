@@ -4,6 +4,8 @@ import "./Home1View.css";
 import { LoginContext } from "../ContextProvider/Context";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
+import environment from "../../Environment";
+
 const Home1View = () => {
     const [value, onChange] = useState(new Date());
   const [usrs, setTodoss] = useState([]);
@@ -33,7 +35,7 @@ asuser();
       //     })
       // });
 
-      const datap = await fetch("/capital-goods/get-all")
+      const datap = await fetch(environment.baseUrl + "/capital-goods/get-all")
       const res = await datap.json();
       setTodoss(res);
       }

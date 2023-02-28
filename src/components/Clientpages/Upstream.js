@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { LoginContext } from "../ContextProvider/Context";
 import "./Home1Add.css";
 import DatePicker from 'react-date-picker';
+import environment from "../../Environment";
 
 const Scomp = () =>{
   const [dte, onChange] = useState(new Date());
@@ -99,7 +100,7 @@ const [inpval, setInpval] = useState({
 const email=he;
 let date=Date.parse(dte);
 
-          const data = await fetch("/upstream/save", {
+          const data = await fetch(environment.baseUrl + "/upstream/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -140,7 +141,7 @@ let date=Date.parse(dte);
   }}
   const hellos =async(e)=>{
 const map=he
-    const datap = await fetch("/upstream/get-all", {
+    const datap = await fetch(environment.baseUrl + "/upstream/get-all", {
       method: "GET",
       // headers: {
       //     "Content-Type": "application/json"

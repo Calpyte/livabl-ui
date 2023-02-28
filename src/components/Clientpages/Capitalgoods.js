@@ -10,6 +10,8 @@ import { LoginContext } from "../ContextProvider/Context";
 import "./Home1Add.css";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
+import environment from '../../Environment';
+
 const Fugitive = () =>{
     const [dte, onChange] = useState(new Date());
     const [usrs, setTodoss] = useState([]);
@@ -29,8 +31,7 @@ const Fugitive = () =>{
   const [vehicle2, setvehicle2] = useState("bus");
   const [transport3, settransport3] = useState("road");
   const [vehicle3, setvehicle3] = useState("bus");
- 
-  
+
   
 const [inpval, setInpval] = useState({
      
@@ -92,7 +93,7 @@ const email=he;
 let date=Date.parse(dte);
 
 
-          const data = await fetch("/capital-goods/save", {
+          const data = await fetch(environment.baseUrl + "/capital-goods/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -128,7 +129,7 @@ quantity,material,distance,vehicle,transport,facility,byerlocation,byername,code
   
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/capital-goods/get-all", {
+        const datap = await fetch(environment.baseUrl + "/capital-goods/get-all", {
           method: "GET",
           // headers: {
           //     "Content-Type": "application/json"

@@ -4,6 +4,8 @@ import "./Home1View.css";
 import { LoginContext } from "../ContextProvider/Context";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
+import environment from "../../Environment";
+
 const Home1View = () => {
     const [value, onChange] = useState(new Date());
   const [usrs, setTodoss] = useState([]);
@@ -33,7 +35,7 @@ asuser();
       //          map
       //     })
       // });
-      const datap = await fetch("/fugitive/fugitive-get-all")
+      const datap = await fetch(environment.baseUrl + "/fugitive/fugitive-get-all")
       const res = await datap.json();
       
       setTodoss(res);
@@ -196,8 +198,6 @@ let i=0;
           <p>You have no data</p>
         )}
       </tbody>
-
-
       
     
 
