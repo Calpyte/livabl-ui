@@ -77,15 +77,14 @@ const Register = () => {
           });
       } else {
             // console.log("user registration succesfully done");
-
-
+           let type = 'CLIENT'; //
             const data = await fetch("user/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    fname, email, password, cpassword,temppass
+                    fname, email, password, cpassword,temppass,type
                 })
             });
 
