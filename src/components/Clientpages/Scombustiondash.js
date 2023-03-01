@@ -12,8 +12,7 @@ const Home1View = () => {
   const [count, setCount] = useState(0);
   const [calculation, setCalculation] = useState(0);
   const { logindata } = useContext(LoginContext);
-  
-  let he="hello"
+
 // const asuser = async()=>{he=(logindata.ValidUserOne.map)}
 
 // asuser();
@@ -26,8 +25,7 @@ const Home1View = () => {
 
 
   const hellos =async(e)=>{
-    const map=he
-        const datap = await fetch(environment.baseUrl + "/stationary/get-all");
+        const datap = await fetch(environment.baseUrl + "/stationary/by-user?email=" + logindata.email);
       const res = await datap.json();
       
       setTodoss(res);

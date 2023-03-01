@@ -23,8 +23,8 @@ const asuser = async()=>{he=(logindata.email)}
 asuser();
 
  
-  const [active, setFuel] = useState("active");
-  const [ractive, setrFuel] = useState("active");
+  const [active, setFuel] = useState(true);
+  const [ractive, setrFuel] = useState(true);
  
   
   
@@ -89,14 +89,16 @@ const [inpval, setInpval] = useState({
 
             const eemail=he;
           
-          const data = await fetch("/client/save", {
+          const data = await fetch("/user/register", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
               },
               body: JSON.stringify({
-                  
-                email,pass,active,eemail
+                "email":email,
+                "password":pass,
+                "isActive": active,
+                "type":0
               })
           });
 
@@ -126,7 +128,7 @@ const [inpval, setInpval] = useState({
   const hellos =async(e)=>{
 const eemail=he
 
-    const datap = await fetch("/client/get-all", {
+    const datap = await fetch("/user/by-type?type=0", {
       method: "GET",
       headers: {
           "Content-Type": "application/json"
@@ -167,14 +169,15 @@ const eemail=he
 
 
 
-        const data = await fetch("/client/update", {
+        const data = await fetch("/user/update", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                
-                remail,ractive
+                "email":remail,
+                "isActive":ractive,
+                "type":0
             })
         });
 
@@ -182,7 +185,8 @@ const eemail=he
         
         setCount((c) => c + 1)
 
-        if (data.status === 201) {
+        if (data.status === 200) {
+           
             toast.success(" Data saved 😃!", {
                 position: "top-center"
             });
@@ -198,6 +202,8 @@ const eemail=he
 
         
 }}
+
+
 const [inp, setInp] = useState({
      
   to:"",
@@ -297,8 +303,8 @@ setCalculation(() => count * 2);
      
       <div className="subract">
       <select value={ractive} onChange={setValsss} className="rsaa" >
-        <option value="active">Activate</option>
-        <option value="inactive">Inactivate</option>
+        <option value={true}>Activate</option>
+        <option value={false}>Inactivate</option>
         <option value="remove">Remove</option>
   
       </select>
@@ -309,8 +315,8 @@ setCalculation(() => count * 2);
  
       <div className="subact">
       <select value={active} onChange={setValss} className="saa" >
-        <option value="active">Yes</option>
-        <option value="inactive">No</option>
+        <option value={true}>Yes</option>
+        <option value={false}>No</option>
   
       </select>
 
@@ -443,8 +449,8 @@ setCalculation(() => count * 2);
         <tr>
         <td  key="{qaait}">{i=i+1}</td>
         <td  key="{qantiy}">{todo.email}</td>
-        <td  key="{quantity">{todo.active}</td>
-        <td  key="{qantity">{todo.pass}</td>
+        <td  key="{quantity">{todo.isActive.toString()}</td>
+        <td  key="{qantity">{todo.password}</td>
        
         </tr>
         )) : (

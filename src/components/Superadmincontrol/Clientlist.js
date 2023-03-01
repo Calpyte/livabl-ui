@@ -128,9 +128,7 @@ const [inpval, setInpval] = useState({
           
   }}
   const hellos =async(e)=>{
-const eemail=he
-
-    const datap = await fetch("/client/get-all", {
+    const datap = await fetch("/user/by-type?type=0", {
       method: "GET",
       headers: {
           "Content-Type": "application/json"

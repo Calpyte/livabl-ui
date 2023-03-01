@@ -52,7 +52,7 @@ const Superlogin = () => {
             // console.log("user login succesfully done");
 
 
-            const data = await fetch("/admin/login",{
+            const data = await fetch("/user/login",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -66,9 +66,16 @@ const Superlogin = () => {
             //  
 
             if(data.status === 201){
-                localStorage.setItem("ausersdatatoken",res.token);
-                history("/superdash")
-                setInpval({...inpval,email:"",password:""});
+                if(res.type === 2){
+                    localStorage.setItem("token",res.token);
+                    history("/superdash")
+                    setInpval({...inpval,email:"",password:""});
+                }else{
+                    toast.error("No Access", {
+                        position: "top-center"
+                    });
+                    history("/")
+                }
             }else{
                 toast.error("Invalid Credentials", {
                     position: "top-center"

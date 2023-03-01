@@ -5,7 +5,6 @@ import "./AssetDeclaration.css";
 import { LoginContext } from "../ContextProvider/Context";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import env_variable from "../../Environment";
 
 
 
@@ -33,7 +32,7 @@ const email=he
   
 
 
-  const [inpval, setInpval] = useState({
+const [inpval, setInpval] = useState({
     assetid:"",assetname:"",assettype:"",latitude:"",longitude:""
 });
 const [inpvalp, setInpvalp] = useState({
@@ -90,7 +89,7 @@ const setValp = (e) => {
      
 
       
-        const email=he;
+       const email = logindata.email;
         const data = await fetch("/addasset", {
             method: "POST",
             headers: {
@@ -130,7 +129,7 @@ const setValp = (e) => {
     setCount((c) => c + 1)
     const { serviceid,servicedescription} = inpvals;
 
-        const email=he;
+        const email = logindata.email;
         const data = await fetch("/addassets", {
             method: "POST",
             headers: {
@@ -170,7 +169,7 @@ const setValp = (e) => {
     setCount((c) => c + 1)
     const { productid,productdescription} = inpvalp;
 
-        const email=he;
+        const email = logindata.email;
         const data = await fetch("/addassetp", {
             method: "POST",
             headers: {

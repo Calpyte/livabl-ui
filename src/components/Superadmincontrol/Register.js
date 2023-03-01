@@ -70,16 +70,14 @@ const Superregister = () => {
                 position: "top-center"
             });
         } else {
-            // console.log("user registration succesfully done");
-
-
-            const data = await fetch("/admin/register", {
+            let type = 2;
+            const data = await fetch("/user/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    fname, email, password, cpassword,secretkey
+                    fname, email, password, cpassword,secretkey,type
                 })
             });
 

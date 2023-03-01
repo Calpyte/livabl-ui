@@ -372,22 +372,24 @@ const addCompanydata = async (e) => {
 //calculation
   let val=["null","null","null"];
   val = getValue(inpval.quantity,cdata[fuel],weight);
-  let co2=val[0]
-  let ch4=val[1]
-  let no2=val[2]
-  const email=he;
+  let co2=val[0];
+  let ch4=val[1];
+  let no2=val[2];
+  const email=logindata.email;
   let date=Date.parse(dte);
-  // let date=(dte.toLocaleDateString());
+  let token = localStorage.getItem('token');
   const data = await fetch(environment.baseUrl + "stationary/save", {
               method: "POST",
               headers: {
-                  "Content-Type": "application/json"
+                  "Content-Type": "application/json",
+                  "Authorization": token,
               },
               body: JSON.stringify({
-                code,facility,quantity,type,weight,fuel,co2,ch4,no2,date,email,person
+                code,facility,quantity,type,weight,fuel,co2,ch4,no2,date,email,person 
               })
           });
           const res = await data.json();
+
           // console.log(weight)
           setCount((c) => c + 1)
           if (data.status === 201) {
@@ -410,10 +412,9 @@ const addCompanydata = async (e) => {
   }}
 
   const hellos =async(e)=>{
-const map=he
-    const datap = await fetch(environment.baseUrl + "/stationary/get-all", {
+  const datap = await fetch("/stationary/by-user?email=" + logindata.email, {
       method: "GET"
-  });
+    });
   const res = await datap.json();
   setTodoss(res);
   }
@@ -421,23 +422,16 @@ const map=he
   let element = 0 ;
 
   for (let index = 0; index < usrs.length; index++) {
-
-
      element += (usrs[index].co2)
-    
   }
 
-  // hellos();
   const navigate = useNavigate();
   const onAddDataClick = useCallback(() => {
     navigate("/homeview");
   }, [navigate]);
 
 useEffect(() => {
-
-  
- 
-  hellos();
+hellos();
 setCalculation(() => count * 2);
 }, [count]);
 

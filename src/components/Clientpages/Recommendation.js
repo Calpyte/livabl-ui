@@ -14,7 +14,7 @@ function Recommendation(){
   asuser();
     
     const hellos =async(e)=>{
-        const email=he
+        const email = logindata.email;
             const datap = await fetch("/quest", {
               method: "POST",
               headers: {

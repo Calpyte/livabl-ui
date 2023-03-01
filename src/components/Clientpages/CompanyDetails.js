@@ -56,7 +56,7 @@ const addCompanydata = async (e) => {
      
 
       
-        const email=he;
+        const email=logindata.email;
         const data = await fetch("/addcompany1", {
             method: "POST",
             headers: {

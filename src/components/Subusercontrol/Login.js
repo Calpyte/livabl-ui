@@ -52,7 +52,7 @@ const Subuserlogin = () => {
             // console.log("user login succesfully done");
 
 
-            const data = await fetch("/subuser/login",{
+            const data = await fetch("/user/login",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -66,9 +66,17 @@ const Subuserlogin = () => {
             //  
              
             if(data.status === 201){
-                localStorage.setItem("susersdatatoken",res.token);
-                history("/subdash")
-                setInpval({...inpval,email:"",password:""});
+                if(res.type === 1 || res.type === 2){
+                    localStorage.setItem("token",res.token);
+                    history("/subdash")
+                    setInpval({...inpval,email:"",password:""});
+                }else{
+                    toast.error("No Access", {
+                        position: "top-center"
+                    }); 
+                    history("/")
+                }
+             
             }else{
                 toast.error("Invalid Credentials", {
                     position: "top-center"

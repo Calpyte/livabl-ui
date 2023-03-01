@@ -61,9 +61,7 @@ const Login = () => {
                 position: "top-center"
             });
         } else {
-            // console.log("user login succesfully done");
-
-
+            console.log("user login succesfully done");
             const data = await fetch("user/login",{
                 method:"POST",
                 headers:{
@@ -76,9 +74,16 @@ const Login = () => {
 
             const res = await data.json();
             if(data.status === 201){
-                localStorage.setItem("usersdatatoken",res.token);
+              if(res.type === 0 || res.type === 2 ){
+                localStorage.setItem("token",res.token);
                 history("/dash")
                 setInpval({...inpval,email:"",password:""});
+              }else{
+                toast.error("No Access", {
+                  position: "top-center"
+                }); 
+                history("/")
+              } 
             }else{
                 toast.error("Invalid Credentials", {
                     position: "top-center"

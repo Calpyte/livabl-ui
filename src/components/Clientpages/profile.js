@@ -17,7 +17,7 @@ const asuser = async()=>{he=(logindata.ValidUserOne.map)}
 asuser();
 
   const hellos =async(e)=>{
-    const email=he
+    const email = logindata.email;
     
         const datap = await fetch("/comp", {
           method: "POST",

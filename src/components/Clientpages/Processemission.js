@@ -91,7 +91,7 @@ const [inpval, setInpval] = useState({
 
                 let date=Date.parse(dte);
 
-            const email=he;
+                const email = logindata.email;
            
 
           const data = await fetch(environment.baseUrl + "/process/save", {

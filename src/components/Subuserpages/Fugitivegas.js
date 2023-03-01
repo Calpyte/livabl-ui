@@ -650,7 +650,7 @@ let vall=null
  
             let co2=val
             let co3=vall
-            const email=he;
+            const email = logindata.email;
             let date=(dte.toLocaleDateString()); 
           const data = await fetch("/fugitive2", {
               method: "POST",

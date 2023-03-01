@@ -2,9 +2,10 @@ import React,{useRef} from 'react';
 import { useReactToPrint } from "react-to-print";
 import { useEffect, useState } from 'react';
 import "./Profile.css"
+import environment from '../Environment';
 
  
-const api_base = 'http://103.108.220.162:3050/';
+const api_base = environment.baseUrl;
 const renderTooltip = context => {
   const { category, value } = context.point || context;
   

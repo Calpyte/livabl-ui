@@ -652,7 +652,7 @@ let vall=null
  
             let co2=val
             let co3=vall
-            const email=he;
+            const email = logindata.email;
             let date=Date.parse(dte); 
           const data = await fetch(environment.baseUrl +"/fugitive/fugitive-gases", {
               method: "POST",

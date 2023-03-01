@@ -50,53 +50,31 @@ asuser();
       const history = useNavigate();
 
     const DashboardValid = async () => {
-        let token = localStorage.getItem("usersdatatoken");
-        let stoken = localStorage.getItem("susersdatatoken");
-        let atoken = localStorage.getItem("ausersdatatoken");
-
-        const res = await fetch("/validuser", {
+        let token = localStorage.getItem("token");
+        if(token){
+          const res = await fetch("/user/validate", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": token
             }
         });
-
-        const data = await res.json();
-        const sres = await fetch("/subuservaliduser", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": stoken
-          }
-        });
-          const sdata = await sres.json();
-          //superadmin
-          const ares = await fetch("/supervaliduser", {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              "Authorization": atoken
+            const data = await res.json();
+            if (res.status === 201 &&  (data.type === 0 || data.type  === 2)) {
+                goToPage("/dash",data)
+            }else if(data.type === 1) {
+                goToPage("/subdash",data)
+            }else{
+              history("/");
             }
-          });
-            const adata = await ares.json();
-      //////////////////////////////////////////
+        }else{
+          history("/");
+        }
+    }
 
-            if (res.status === 201 ) {
-              console.log("user verify");
-              setLoginData(data)
-              history("/dash");
-            }else if(sres.status == 201){
-              console.log("user verify");
-              setLoginData(sdata)
-              history("/subdash");
-            }else if(ares.status == 201){
-              console.log("user verify");
-              setLoginData(adata)
-              history("/superdash");
-            }  else {
-                history("/")
-            }
+    function goToPage(path,data){
+      setLoginData(data)
+      history(path);
     }
 
 
@@ -105,7 +83,6 @@ asuser();
             DashboardValid();
             setData(true)
         }, 2000)
-
     }, [])
 
     return (

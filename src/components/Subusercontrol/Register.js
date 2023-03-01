@@ -71,21 +71,20 @@ const Superregister = () => {
             });
         } else {
             // console.log("user registration succesfully done");
-
-
-            const data = await fetch("/subuser/register", {
+  
+            let type = 1;
+            const data = await fetch("user/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    fname, email, password, cpassword,temppass
+                    fname, email, password, cpassword,temppass,type
                 })
             });
 
             const res = await data.json();
             // console.log(res.status);
-
             if (data.status === 201) {
                 toast.success("Registration Successfully done 😃!", {
                     position: "top-center"
