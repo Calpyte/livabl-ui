@@ -4,6 +4,8 @@ import "./Home1View.css";
 import { LoginContext } from "../ContextProvider/Context";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
+import environment from "../../Environment";
+
 const Home1View = () => {
     const [value, onChange] = useState(new Date());
   const [usrs, setTodoss] = useState([]);
@@ -24,15 +26,16 @@ asuser();
 
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/fugdashtwo", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-               map
-          })
-      });
+      //   const datap = await fetch("/fugdashtwo", {
+      //     method: "POST",
+      //     headers: {
+      //         "Content-Type": "application/json"
+      //     },
+      //     body: JSON.stringify({
+      //          map
+      //     })
+      // });
+      const datap = await fetch(environment.baseUrl + "/fugitive/fugitive-get-all")
       const res = await datap.json();
       
       setTodoss(res);
@@ -186,7 +189,7 @@ let i=0;
         <td  key="quantity">{todo.quantity}</td>
         <td  key="{quantt}">{todo.yesno}</td>
         <td  key="{quantt}">{todo.person}</td>
-        <td  key="quantity">{todo.date}</td>
+        <td  key="quantity">{todo.fugitiveGasDateStr}</td>
         <td  key="quantity">{todo.co2}</td>
     
     
@@ -195,8 +198,6 @@ let i=0;
           <p>You have no data</p>
         )}
       </tbody>
-
-
       
     
 

@@ -8,6 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { LoginContext } from "../ContextProvider/Context";
 import "./Home1Add.css";
 import DatePicker from 'react-date-picker';
+import environment from '../../Environment';
+
 const Scomp = () =>{
   const [dte, onChange] = useState(new Date());
   const [usrs, setTodoss] = useState([]);
@@ -376,7 +378,7 @@ const addCompanydata = async (e) => {
   const email=he;
   let date=Date.parse(dte);
   // let date=(dte.toLocaleDateString());
-  const data = await fetch("stationary/save", {
+  const data = await fetch(environment.baseUrl + "stationary/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -409,7 +411,7 @@ const addCompanydata = async (e) => {
 
   const hellos =async(e)=>{
 const map=he
-    const datap = await fetch("/stationary/get-all", {
+    const datap = await fetch(environment.baseUrl + "/stationary/get-all", {
       method: "GET"
   });
   const res = await datap.json();
@@ -432,6 +434,8 @@ const map=he
   }, [navigate]);
 
 useEffect(() => {
+
+  
  
   hellos();
 setCalculation(() => count * 2);

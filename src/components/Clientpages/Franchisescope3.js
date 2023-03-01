@@ -10,6 +10,8 @@ import { LoginContext } from "../ContextProvider/Context";
 import "./Home1Add.css";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
+import environment from '../../Environment';
+
 const Fugitive = () =>{
     const [dte, onChange] = useState(new Date());
     const [usrs, setTodoss] = useState([]);
@@ -87,7 +89,7 @@ const addCompanydata = async (e) => {
       const email=he;
       let date=Date.parse(dte);
 
-        const data = await fetch("/franchise/save", {
+        const data = await fetch(environment.baseUrl + "/franchise/save", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -130,7 +132,7 @@ const addCompanydata = async (e) => {
       //          map
       //     })
       // });
-      const datap = await fetch("/franchise/get-all")
+      const datap = await fetch(environment.baseUrl + "/franchise/get-all")
       const res = await datap.json();
       
       setTodoss(res);

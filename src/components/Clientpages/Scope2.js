@@ -7,7 +7,7 @@ import DatePicker from 'react-date-picker';
 import { LoginContext } from "../ContextProvider/Context";
 import { NavLink,useNavigate,Link} from "react-router-dom"
 import Header from './Header';
-
+import environment from "../../Environment";
 
 const Scope2 = () => {
   const [usrs, setTodoss] = useState([]);
@@ -145,7 +145,7 @@ asuser();
                 let date=Date.parse(dte);
     
     
-              const data = await fetch("/electricity/save", {
+              const data = await fetch(environment.baseUrl + "/electricity/save", {
                   method: "POST",
                   headers: {
                       "Content-Type": "application/json"
@@ -192,7 +192,7 @@ asuser();
 
   const hellos =async(e)=>{
       const map=he
-      const datap = await fetch("/electricity/get-all");
+      const datap = await fetch(environment.baseUrl + "/electricity/get-all");
       const res = await datap.json();
       setTodoss(res);
       // setCount((c) => c + 1) 

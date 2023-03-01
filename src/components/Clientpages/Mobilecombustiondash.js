@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Home1View.css";
 import { LoginContext } from "../ContextProvider/Context";
 import Header from './Header';
+import environment from "../../Environment";
+
 const Home1View = () => {
   const [usrs, setTodoss] = useState([]);
   const [count, setCount] = useState(0);
@@ -33,7 +35,7 @@ asuser();
       //          map
       //     })
       // });
-      const datap = await fetch("/mobile/get-all");
+      const datap = await fetch(environment.baseUrl + "/mobile/get-all");
       const res = await datap.json();
       
       setTodoss(res);

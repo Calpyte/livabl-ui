@@ -10,13 +10,112 @@ import { LoginContext } from "../ContextProvider/Context";
 import "./Home1Add.css";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
+import environment from "../../Environment";
+
 const Mcomp = () =>{
    const [dte, onChange] = useState(new Date());
     const [usrs, setTodoss] = useState([]);
     const [count, setCount] = useState(0);
     const [calculation, setCalculation] = useState(0);
     const { logindata } = useContext(LoginContext);
-    
+    const cdata ={
+      "JetFuel":{
+        "co2": 2.49
+      },
+      "AviationGasoline":{
+        "co2": 2.2
+      },
+      "OnRoadDieselFuel":{
+        "co2": 2.67
+      },
+      "GasolinePetrol":{
+        "co2": 2.27
+      },
+      "ResidualFuelOil":{
+        "co2": 2.93
+      },
+      "LPG":{
+        "co2": 1.61
+      },
+      "LNG":{
+        "co2": 1.17
+      },
+      "CNG":{
+        "co2": 0.053
+      },
+      "Ethanol":{
+        "co2": 1.46
+      },
+      "Biodiesel":{
+        "co2": 2.49
+      },
+      "EthanolGasoline":{
+        "co2": 0.34
+      },
+      "BiodieselDiesel":{
+        "co2": 2.14
+      },
+      "HeavygoodsvehicleEthanol":{
+        "co2": 0.93
+      },
+      "HeavygoodsvehicleDiesel":{
+        "co2": 0.71
+      },
+      "HeavygoodsvehicleLPG":{
+        "co2": 0.42
+      },
+      "HeavygoodsvehicleLPG":{
+        "co2": 0.42
+      },
+      "LightgoodsvehicleDiesel":{
+        "co2": 0.38
+      },
+      "LightgoodsvehiclePetrol":{
+        "co2": 0.32
+      },
+      "LightgoodsvehicleEthanol":{
+        "co2": 0.32
+      },
+      "LightgoodsvehicleCNG":{
+        "co2": 0.22
+      },
+      "CarDiesel":{
+        "co2": 0.27
+      },
+      "CarPetrol":{
+        "co2": 0.23
+      },
+      "BusGasoline":{
+        "co2": 1.06
+      },
+      "BusEthanol":{
+        "co2": 0.69
+      },
+      "BusDiesel":{
+        "co2": 1.69
+      },
+      "AirLongHaul":{
+        "co2": 0.61
+      },
+      "Rail":{
+        "co2": 0.02
+      },
+      "Shipping":{
+        "co2": 0.0528
+      },
+      "Road":{
+        "co2": 0.3267
+      },
+      "AirShortHaul":{
+        "co2": 1.47
+      },
+      "AirDomestic":{
+        "co2": 1.96
+      },
+    }
+
+
+
     let he="hello"
     let person="hello"
     const asuser = async()=>{he=(logindata.ValidUserOne.map);
@@ -96,12 +195,15 @@ const [inpval, setInpval] = useState({
       })
   };
 
+  function getValue(quantity,chemicaldata,type){
+    if(type === "liter") return quantity*(chemicaldata);
+    else if(type === "kg") return quantity*(chemicaldata);
+    else if(type === "freight") return quantity*(chemicaldata);
+  }  
+
   const addCompanydata = async (e) => {
-      e.preventDefault();
-
+      // e.preventDefault(quantity,);
       const { code,facility,quantity ,category,subcat,weight} = inpval;
-
-         
          if (code === "") {
           toast.warning("code is required!", {
               position: "top-center"
@@ -116,297 +218,13 @@ const [inpval, setInpval] = useState({
               });}else{
 //calculation
 
-const JetFuel	       =  2.49
-const AviationGasoline=	2.2
-const GasolinePetrol	=2.27
-const OnRoadDieselFuel=	2.67
-const ResidualFuelOil =	2.93
-const LPG=	1.61
-const CNG=	0.053
-const LNG=	1.17
-const Ethanol	=1.46
-const Biodiesel	=2.49
-const EthanolGasoline=	0.34
-const BiodieselDiesel=	2.14
 
-const BusEthanol	=0.69
-const BusDiesel	=1.69
-const BusGasoline	=1.06
-const CarPetrol	=0.23
-const CarDiesel	=0.27
-const LightgoodsvehicleCNG 	=0.22
-const LightgoodsvehicleLPG 	=0.21
-const LightgoodsvehicleEthanol	=0.32
-const LightgoodsvehiclePetrol	=0.32
-const LightgoodsvehicleDiesel	=0.38
-const HeavygoodsvehiclePetrol	=0.6
-const HeavygoodsvehicleDiesel	=0.71
-const HeavygoodsvehicleLPG 	=0.42
-const HeavygoodsvehicleEthanol	=0.39
+let co2 = literdistance === "liter" ? quantity*(cdata[fuel])["co2"] : literdistance === "kg" ? quantity*(cdata[fuel])["co2"]: weight * quantity* (cdata[fuel])["co2"];
 
-const AirDomestic	=1.96
-const AirShortHaul	=1.47
-const AirLongHaul	=0.61
-const Rail	=0.02
-const Road	=0.3267
-const Shipping	=0.0528
-
-function jetFuels(calc){
-    var result=(calc*(JetFuel))
-    return result
-     
-}
-function AviationGasolines(calc){
-    var result=(calc*(AviationGasoline))
-    return result
-     
-}function GasolinePetrols(calc){
-    var result=(calc*(GasolinePetrol))
-    return result
-     
-}function OnRoadDieselFuels(calc){
-    var result=(calc*(OnRoadDieselFuel))
-    return result
-     
-}function ResidualFuelOils(calc){
-    var result=(calc*(ResidualFuelOil))
-    return result
-     
-}function LPGs(calc){
-    var result=(calc*(LPG))
-    return result
-     
-}function CNGs(calc){
-    var result=(calc*(CNG))
-    return result
-     
-}function LNGs(calc){
-    var result=(calc*(LNG))
-    return result
-     
-}function Ethanols(calc){
-    var result=(calc*(Ethanol))
-    return result
-     
-}function Biodiesels(calc){
-    var result=(calc*(Biodiesel))
-    return result
-     
-}function EthanolGasolines(calc){
-    var result=(calc*(EthanolGasoline))
-    return result
-     
-}
-function BiodieselDiesels(calc){
-    var result=(calc*(BiodieselDiesel))
-    return result
-     
-}
-//distance
-function BusEthanols(calc){
-    var result=(calc*(BusEthanol))
-    return result
-     
-}
-function BusDiesels(calc){
-    var result=(calc*(BusDiesel))
-    return result
-     
-}function BusGasolines(calc){
-    var result=(calc*(BusGasoline))
-    return result
-     
-}function CarPetrols(calc){
-    var result=(calc*(CarPetrol))
-    return result
-     
-}function CarDiesels(calc){
-    var result=(calc*(CarDiesel))
-    return result
-     
-}function LightgoodsvehicleCNGs(calc){
-    var result=(calc*(LightgoodsvehicleCNG))
-    return result
-     
-}function LightgoodsvehicleLPGs(calc){
-    var result=(calc*(LightgoodsvehicleLPG))
-    return result
-     
-}function LightgoodsvehicleEthanols(calc){
-    var result=(calc*(LightgoodsvehicleEthanol))
-    return result
-     
-}function LightgoodsvehiclePetrols(calc){
-    var result=(calc*(LightgoodsvehiclePetrol))
-    return result
-     
-}function LightgoodsvehicleDiesels(calc){
-    var result=(calc*(LightgoodsvehicleDiesel))
-    return result
-     
-}function HeavygoodsvehiclePetrols(calc){
-    var result=(calc*(HeavygoodsvehiclePetrol))
-    return result
-     
-}
-function HeavygoodsvehicleDiesels(calc){
-    var result=(calc*(HeavygoodsvehicleDiesel))
-    return result
-     
-}
-function HeavygoodsvehicleLPGs(calc){
-    var result=(calc*(HeavygoodsvehicleLPG))
-    return result
-     
-}function HeavygoodsvehicleEthanols(calc){
-    var result=(calc*(HeavygoodsvehicleEthanol))
-    return result
-     
-}
-
-
-//freight
-function AirDomestics(calc,cal){
-    var result=((calc*AirDomestic)*cal)
-    return result
-     
-}
-function Shippings(calc,cal){
-    var result=((calc*Shipping)*cal)
-    return result
-     
-}function Roads(calc,cal){
-    var result=((calc*Road)*cal)
-    return result
-     
-}function Rails(calc,cal){
-    var result=((calc*Rail)*cal)
-    return result
-     
-}function AirLongHauls(calc,cal){
-    var result=((calc*AirLongHaul)*cal)
-    return result
-     
-}function AirShortHauls(calc,cal){
-    var result=((calc*AirShortHaul)*cal)
-    return result
-     
-}
-
-
-
-
-      
-                
-let val="jbhkb"
-
-
-
-
-if(literdistance==="liter"){
-if(fuel==="BiodieselDiesel"){
-    val =BiodieselDiesels(inpval.quantity)}
-    else if(fuel==="EthanolGasoline"){
-     val =EthanolGasolines(inpval.quantity)
-   }else if(fuel==="null"){
-    val =0
-  }
-   else if(fuel==="Biodiesel"){
-     val =Biodiesels(inpval.quantity)
-   }else if(fuel==="Ethanol"){
-     val =Ethanols(inpval.quantity)
-   }else if(fuel==="LNG"){
-     val =LNGs(inpval.quantity)
-   }else if(fuel==="CNG"){
-     val =CNGs(inpval.quantity)
-   }else if(fuel==="LPG"){
-     val =LPGs(inpval.quantity)
-   }else if(fuel==="ResidualFuelOil"){
-     val =ResidualFuelOils(inpval.quantity)
-   }else if(fuel==="OnRoadDieselFuel"){
-     val =OnRoadDieselFuels(inpval.quantity)
-   }else if(fuel==="GasolinePetrol"){
-     val =GasolinePetrols(inpval.quantity)
-   }else if(fuel==="AviationGasoline"){
-     val =AviationGasolines(inpval.quantity)
-   }else if(fuel==="JetFuel"){
-     val =jetFuels(inpval.quantity)
-   }else{
-     console.log("errr");
-   }
-   
-}else if(literdistance==="km"){
-    if(mode==="HeavygoodsvehicleEthanol"){
-        val =HeavygoodsvehicleEthanols(inpval.quantity)}
-        else if(mode==="HeavygoodsvehicleLPG"){
-         val =HeavygoodsvehicleLPGs(inpval.quantity)
-       } else if(mode==="null"){
-        val =0
-      }
-       else if(mode==="HeavygoodsvehicleDiesel"){
-         val =HeavygoodsvehicleDiesels(inpval.quantity)
-       }else if(mode==="LightgoodsvehicleDiesel"){
-         val =LightgoodsvehicleDiesels(inpval.quantity)
-       }else if(mode==="LightgoodsvehiclePetrol"){
-         val =LightgoodsvehiclePetrols(inpval.quantity)
-       }else if(mode==="LightgoodsvehicleEthanol"){
-         val =LightgoodsvehicleEthanols(inpval.quantity)
-       }else if(mode==="LightgoodsvehicleLPG"){
-         val =LightgoodsvehicleLPGs(inpval.quantity)
-       }else if(mode==="LightgoodsvehicleCNG"){
-         val =LightgoodsvehicleCNGs(inpval.quantity)
-       }else if(mode==="CarDiesel"){
-         val =CarDiesels(inpval.quantity)
-       }else if(mode==="CarPetrol"){
-         val =CarPetrols(inpval.quantity)
-       }else if(mode==="BusGasoline"){
-         val =BusGasolines(inpval.quantity)
-       }else if(mode==="BusEthanol"){
-         val =BusEthanols(inpval.quantity)
-       }else if(mode==="HeavygoodsvehiclePetrol"){
-         val =HeavygoodsvehiclePetrols(inpval.quantity)
-       }
-       else if(mode==="BusDiesel"){
-         val =BusDiesels(inpval.quantity)
-       }else{
-         console.log("errr");
-       }
-}
-    else{
-
-
-if(air==="AirShortHaul"){
-    val =AirShortHauls(inpval.quantity,inpval.weight)}
-    else if(air==="Rail"){
-     val =Rails(inpval.quantity,inpval.weight)
-   } else if(air==="null"){
-    val =0;
-  }
-   else if(air==="Road"){
-     val =Roads(inpval.quantity,inpval.weight)
-   }else if(air==="Shipping"){
-     val =Shippings(inpval.quantity,inpval.weight)
-   }else if(air==="AirDomestic"){
-     val =AirDomestics(inpval.quantity,inpval.weight)
-   }else if(air==="AirLongHaul"){
-     val =AirLongHauls(inpval.quantity,inpval.weight)
-   }else{
-     console.log("errr");
-   }
-   
-
-    }
-
-
-
-
-
-let co2=val
-           
-            
-let date=Date.parse(dte);
+          
+let date=Date.parse(dte); 
           const email=he;
-          const data = await fetch("/mobile/save", {
+          const data = await fetch(environment.baseUrl + "/mobile/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -450,7 +268,7 @@ let date=Date.parse(dte);
   
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/mobile/get-all", {
+        const datap = await fetch(environment.baseUrl + "/mobile/get-all", {
           method: "GET",
           // headers: {
           //     "Content-Type": "application/json"

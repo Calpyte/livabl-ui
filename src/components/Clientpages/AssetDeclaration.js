@@ -5,6 +5,7 @@ import "./AssetDeclaration.css";
 import { LoginContext } from "../ContextProvider/Context";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import env_variable from "../../Environment";
 
 
 
@@ -44,6 +45,7 @@ const [inpvals, setInpvals] = useState({
 
 
 const setVal = (e) => {
+
     
     const {name, value } = e.target;
 

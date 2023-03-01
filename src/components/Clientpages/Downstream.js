@@ -10,6 +10,7 @@ import { LoginContext } from "../ContextProvider/Context";
 import "./Home1Add.css";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
+import environment from '../../Environment';
 
 const Fugitive = () =>{
     const [dte, onChange] = useState(new Date());
@@ -87,7 +88,7 @@ productname2:"",disposal:"",lease:"",namefranchise:"",location:""
 const email=he;
 let date=Date.parse(dte);
 
-          const data = await fetch("/downstream/save", {
+          const data = await fetch(environment.baseUrl + "/downstream/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -127,7 +128,7 @@ let date=Date.parse(dte);
   }
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch("/downstream/get-all" ,{
+        const datap = await fetch(environment.baseUrl + "/downstream/get-all" ,{
           method: "GET",
           // headers: {
           //     "Content-Type": "application/json"
