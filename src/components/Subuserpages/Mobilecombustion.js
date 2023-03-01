@@ -406,7 +406,7 @@ let co2=val
             
 let date=(dte.toLocaleDateString());
 
-            const email=he;
+const email = logindata.email;
 
 
 

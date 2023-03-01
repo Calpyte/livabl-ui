@@ -77,36 +77,19 @@ const Register = () => {
           });
       } else {
             // console.log("user registration succesfully done");
-
-
+           let type = 0; //
             const data = await fetch("user/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    fname, email, password, cpassword,temppass
+                    fname, email, password, cpassword,temppass,type
                 })
             });
 
             const res = await data.json();
             console.log(res);
-          // let  cname=fname;let currency="";let  pocnumber="";let  pocname="";
-          // let noemployees="";let website="";let address="";let description=""
-            // const sdata = await fetch("/addcompany1", {
-            //     method: "POST",
-            //     headers: {
-            //         "Content-Type": "application/json"
-            //     },
-            //     body: JSON.stringify({
-            //         // fname, email, password, cpassword
-            //         cname,email,currency, pocnumber, pocname,noemployees,website,address,description
-            //     })
-            // });
-    
-            // const sres = await sdata.json();
-            // console.log(sres)
-    
             if (data.status === 201) {
                 toast.success("Registration Successfully done 😃!", {
                     position: "top-center"

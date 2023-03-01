@@ -86,7 +86,7 @@ const addCompanydata = async (e) => {
               });
             }else{
 
-      const email=he;
+      const email = logindata.email;
       let date=Date.parse(dte);
 
         const data = await fetch(environment.baseUrl + "/franchise/save", {

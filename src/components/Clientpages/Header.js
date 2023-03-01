@@ -21,9 +21,8 @@ const Header = () => {
         setAnchorEl(null);
     };
 
-
     const logoutuser = async () => {
-        let token = localStorage.getItem("usersdatatoken");
+        let token = localStorage.getItem("token");
         const res = await fetch("user/logout", {
             method: "GET",
             headers: {
@@ -33,9 +32,7 @@ const Header = () => {
             },
             credentials: "include"
         });
-    localStorage.removeItem("usersdatatoken");
-    localStorage.removeItem("susersdatatoken");
-    localStorage.removeItem("ausersdatatoken");
+    localStorage.removeItem("token");
     setLoginData(false)
     history("/");
     }

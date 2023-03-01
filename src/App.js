@@ -123,56 +123,29 @@ function App() {
   const history = useNavigate();
 
   const DashboardValid = async () => {
-    let token = localStorage.getItem("usersdatatoken");
-    let stoken = localStorage.getItem("susersdatatoken");
-    let atoken = localStorage.getItem("ausersdatatoken");
-
-//client
-    const res = await fetch("/validuser", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": token
+    let token = localStorage.getItem("token");
+    if(token){
+      const res = await fetch("/user/validate", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": token
+        }
+      });
+        const data = await res.json();
+      if (res.status === 201 ) {
+        if(data.type === 0) goToPage("/dash",data);
+        else if(data.type === 1)goToPage("/subdash",data);
+        else if(data.type === 2) goToPage("/superdash",data);
+      }else {
+        console.log("user not valid ohh");
       }
-    });
-      const data = await res.json();
-  //subuser
-
-  const sres = await fetch("/subuservaliduser", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": stoken
     }
-  });
-    const sdata = await sres.json();
-    //superadmin
-    const ares = await fetch("/supervaliduser", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": atoken
-      }
-    });
-      const adata = await ares.json();
-      ///////////////////////////////
-    if (res.status === 201 ) {
-      console.log("user verify");
+    }
+   
+  function goToPage(path,data){
     setLoginData(data)
-   history("/dash")
-    }else if(sres.status == 201){
-      console.log("user verify");
-       setLoginData(sdata)
-      history("/subdash");
-      console.log("sub user");
-    }else if(ares.status == 201){
-      console.log("user verify");
-      setLoginData(adata)
-      history("/superdash");
-      console.log("super user");
-    }  else {
-      console.log("user not valid ohh");
-    }
+    history(path);
   }
 
   useEffect(() => {

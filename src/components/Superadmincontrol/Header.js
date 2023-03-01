@@ -22,20 +22,18 @@ const Header = () => {
     };
 
     const logoutuser = async () => {
-    let atoken = localStorage.getItem("ausersdatatoken");
-    const ares = await fetch("/admin/logout", {
+    let token = localStorage.getItem("token");
+    const ares = await fetch("/user/logout", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": atoken,
+            "Authorization": token,
             Accept: "application/json"
         },
         credentials: "include"
     });
 
-    localStorage.removeItem("usersdatatoken");
-    localStorage.removeItem("susersdatatoken");
-    localStorage.removeItem("ausersdatatoken");
+    localStorage.removeItem("token");
     setLoginData(false)
     history("/");
     }

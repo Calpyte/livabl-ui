@@ -89,7 +89,7 @@ const [inpval, setInpval] = useState({
 
                 let date=(dte.toLocaleDateString());
 
-            const email=he;
+                const email = logindata.email;
            
 
           const data = await fetch("/process", {

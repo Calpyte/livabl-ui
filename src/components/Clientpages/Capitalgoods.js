@@ -84,12 +84,12 @@ const [inpval, setInpval] = useState({
             toast.warning("Facility is required!", {
                 position: "top-center"
             });
-            }else if (distance === "") {
+          }else if (distance === "") {
               toast.warning("distance is required!", {
                   position: "top-center"
               });}else{
 //calculation
-const email=he;
+const email=logindata.email;
 let date=Date.parse(dte);
 
 

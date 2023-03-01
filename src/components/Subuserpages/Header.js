@@ -23,19 +23,17 @@ const Header = () => {
 
     
     const logoutuser = async () => {
-        let stoken = localStorage.getItem("susersdatatoken");
-       const sres = await fetch("/subuser/logout", {
+        let token = localStorage.getItem("token");
+       const sres = await fetch("/user/logout", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": stoken,
+            "Authorization": token,
             Accept: "application/json"
         },
         credentials: "include"
     });
-    localStorage.removeItem("usersdatatoken");
-    localStorage.removeItem("susersdatatoken");
-    localStorage.removeItem("ausersdatatoken");
+    localStorage.removeItem("token");
     setLoginData(false)
     history("/");
     }

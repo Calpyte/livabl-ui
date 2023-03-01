@@ -1,5 +1,5 @@
 
 
 const environment = {}
-environment.baseUrl = 'http://103.108.220.162:3050/';
+environment.baseUrl = 'http://localhost:8080/master/';
 export default environment
