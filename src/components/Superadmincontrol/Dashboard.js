@@ -19,7 +19,6 @@ const Dashboard = () => {
 
     const DashboardValid = async () => {
         let token = localStorage.getItem("token");
-        let obj = { 0:"/dash", 1:"/subdash" , 2:"/superdash" };
         if(token){
           const res = await fetch("/user/validate", {
             method: "GET",
@@ -29,18 +28,31 @@ const Dashboard = () => {
             }
         });
         const data = await res.json();
-            if(res.status === 201  && data.type) goToPage(obj[data?.type],data)
-            else history("/")
+            if(res.status === 201  && data.type){
+               if(data.type === 0){
+                setLoginData(data);
+                history("/dash");
+               } 
+               else if(data.type === 1) {
+                setLoginData(data);
+                history("/subdash");
+               }
+               else if(data.type === 2){
+                setLoginData(data);
+                history("/superdash");
+               }
+               else  history("/");
+            }
+            else{ history("/")}
+             
         }else{
           history("/")
         }
-
-        
-    function goToPage(path,data){
-      setLoginData(data)
-      history(path);
     }
-
+    
+    function goToPage(path,data){
+      setLoginData(data);
+      history(path);
     }
 
 
@@ -54,11 +66,8 @@ const Dashboard = () => {
         <Routes> 
         <Route path="/" element={<Client/>}/>
         <Route path="/superdash" element={<Clientlist/>}/>
-       
         </Routes>
-   
-       
-    </>
+        </>
     )
 }
 

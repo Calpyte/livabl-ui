@@ -1,38 +1,34 @@
 
 import { Form, Button } from "react-bootstrap";
 import Header from './Header';
-import React, { Component ,useCallback ,useState,useContext, useEffect} from 'react';
-import { NavLink,useNavigate,Link} from "react-router-dom"
+import React, { useCallback ,useState,useContext, useEffect} from 'react';
+import { useNavigate,Link} from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { LoginContext } from "../ContextProvider/Context";
 import "./Home1Add.css";
 
 const Scomp = () =>{
-  const history = useNavigate();
      
-
+  const history = useNavigate();
   const [usrs, setTodoss] = useState([]);
   const [count, setCount] = useState(0);
   const [calculation, setCalculation] = useState(0);
   const { logindata } = useContext(LoginContext);
   
   let he="hello"
-const asuser = async()=>{he=(logindata.email)}
+  const asuser = async()=>{he=(logindata.ValidUserOne.email)}
+  
+  asuser();
 
-asuser();
-
- 
   const [active, setFuel] = useState(true);
   const [ractive, setrFuel] = useState(true);
  
-  
-  
+
 const [inpval, setInpval] = useState({
-     
     email:"",
     pass:""
-  });
+});
   const [inpvals, setInpvals] = useState({
      
     remail:""
@@ -73,10 +69,9 @@ const [inpval, setInpval] = useState({
 
   const addCompanydata = async (e) => {
       e.preventDefault();
-
       const {email,pass } = inpval;
 
-         
+  
          if (email === "") {
           toast.warning("code is required!", {
               position: "top-center"
@@ -86,8 +81,6 @@ const [inpval, setInpval] = useState({
                 position: "top-center"
             });
             }else{
-
-            const eemail=he;
           
           const data = await fetch("/user/register", {
               method: "POST",
@@ -108,26 +101,19 @@ const [inpval, setInpval] = useState({
           
 
 
-          if (data.status === 201) {
+            if (data.status === 201) {
               toast.success(" User Added 😃!", {
                   position: "top-center"
               });
-              setInpval({ ...inpval,  
-                
-                email:"",
-                pass:""
-                
-             });}else {
-              toast.error("User Already exists!", {
-                position: "top-center"
-            });
-              }
+              setInpval({...inpval,email:"",pass:""});
+            }
+            else {
+              toast.error("User Already exists!", {position: "top-center"});
+            }
 
           
   }}
   const hellos =async(e)=>{
-const eemail=he
-
     const datap = await fetch("/user/by-type?type=0", {
       method: "GET",
       headers: {
@@ -136,18 +122,12 @@ const eemail=he
     
   });
   const res = await datap.json();
-  
   setTodoss(res);
   }
   let element = 0 ;
-
   for (let index = 0; index < usrs.length; index++) {
-
-
      element += (usrs[index].co2)
-    
   }
-
 
   const navigate = useNavigate();
   const onAddDataClick = useCallback(() => {
@@ -157,7 +137,7 @@ const eemail=he
 
   const raddCompanydata = async (e) => {
     e.preventDefault();
-   
+
     const { remail} = inpvals;
 
       
@@ -275,24 +255,16 @@ const mail = async(e)=>{
       }
 }
 
-let i=0
 
 
+let i = 0;
 useEffect(() => {
  
   hellos();
 setCalculation(() => count * 2);
 }, [count]);
-
-
-    return(
-        
-         
-        
-      <div className="home1-hello">
-         
-      
-
+  return(
+    <div className="home1-hello">
       <div className="home1-add-inner" />
       <img
         className="whatsapp-image-2022-12-22-at-9"
@@ -301,14 +273,12 @@ setCalculation(() => count * 2);
       />
      <div className="ellipse-icon">  <Header/></div>
      
-      <div className="subract">
+       <div className="subract">
       <select value={ractive} onChange={setValsss} className="rsaa" >
         <option value={true}>Activate</option>
         <option value={false}>Inactivate</option>
         <option value="remove">Remove</option>
-  
       </select>
-
     </div>
       
     
@@ -325,7 +295,7 @@ setCalculation(() => count * 2);
 
          
     
-      <Form.Group className="subremail">
+     <Form.Group className="subremail">
         <Form.Control   type="text"
               placeholder="Enter Client email"
               name="remail"
@@ -336,7 +306,7 @@ setCalculation(() => count * 2);
    
 
     
-      <Form.Group className="subemail">
+       <Form.Group className="subemail">
         <Form.Control  type="text"
               placeholder="Enter Client email"
               name="email"
@@ -407,72 +377,49 @@ setCalculation(() => count * 2);
       
       <h4 className="subhead2">Set Client Password</h4>
       <h4 className="subhead3">Active Status</h4>
-     
-      <Button className="subbutton" variant="primary" onClick={addCompanydata}>
+  
+       <Button className="subbutton" variant="primary" onClick={addCompanydata}>
         Add user
       </Button>
       <Button className="subrbutton" variant="primary" onClick={raddCompanydata}>
         Save
       </Button>
-   
- 
-      <Link to="/cli">
-      <a className="measure">Clients</a>
-        </Link> 
-        <Link to="/client">
-      <a className="reduce">Clientcontrol</a></Link>
-      <Link to="/superadd">
-      <a className="offset">Addsuperadmin</a></Link>
-      <Link to="/clidet">
-      <a className="dashboard">Client details</a>
-        </Link> 
-
-      <table class="subusertable">
-
-	
-<thead>
-  <tr>
-    <th>S.NO</th>
-    <th>Email</th>
-    <th>Active Status</th>
-    <th>Password</th>
-   
-  </tr>
-</thead>
-
-
-
-
-      <tbody>
-      {usrs.length > 0  ? usrs.map
-    (todo => (
-        <tr>
-        <td  key="{qaait}">{i=i+1}</td>
-        <td  key="{qantiy}">{todo.email}</td>
-        <td  key="{quantity">{todo.isActive.toString()}</td>
-        <td  key="{qantity">{todo.password}</td>
-       
-        </tr>
-        )) : (
-          <p>You have no users</p>
-        )}
-      </tbody>
-
-
-      
-    
-
-</table>
-
-
-
- <ToastContainer/>
-
-    </div>
+     <Link to="/cli"><a className="measure">Clients</a></Link> 
+      <Link to="/client"><a className="reduce">Clientcontrol</a></Link>
+      <Link to="/superadd"><a className="offset">Addsuperadmin</a></Link>
+      <Link to="/clidet"><a className="dashboard">Client details</a></Link> 
+    <table className="subusertable">
+        <thead>
+          <tr>
+            <th>S.NO</th>
+            <th>Email</th>
+            <th>Active Status</th>
+            <th>Password</th>
+          </tr>
+        </thead>
+       <tbody>
+       {usrs.length > 0  ? usrs.map
+         (todo => (
+          <tr>
+          <td  key="{qaait}">{i=i+1}</td>
+          <td  key="{qantiy}">{todo?.email}</td>
+          <td  key="{quantity}">{todo?.isActive+""}</td>
+          <td  key="{qantity}">{todo?.password}</td>
+          </tr>
+          )) : (
+            <tr><td><p>You have no users</p></td></tr>
+          )}
+        </tbody>
+      </table> 
+  <ToastContainer/> 
+</div>
         
    
    
   
-    )}
+  )
+
+
+}
 
 export default Scomp;

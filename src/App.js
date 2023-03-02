@@ -178,8 +178,8 @@ function App() {
               <Route path="/sublogin" element={<Subuserlogin/>}/>
               <Route path="/subdash" element={<Subdash/>}/>
               <Route path="/superdash" element={<Superdash/>}/>
-            
               <Route path="/dash" element={<Dashboard />} />
+
               <Route path="/password-reset" element={<PasswordReset />} />
               <Route path="/forgotpassword/:id/:token" element={<ForgotPassword />} />
               <Route path="/Superregister" element={<Superregister/>}/>

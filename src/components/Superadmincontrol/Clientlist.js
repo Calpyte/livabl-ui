@@ -133,8 +133,8 @@ const [inpval, setInpval] = useState({
       headers: {
           "Content-Type": "application/json"
       }
-    
   });
+  
   const res = await datap.json();
   
   setTodoss(res);
@@ -226,35 +226,13 @@ setCalculation(() => count * 2);
         src="../whatsapp-image-20221222-at-923-3@2x.png"
       />
      <div className="ellipse-icon">  <Header/></div>
-     
-     
-     
- 
       <h2 className="subuser">Client list</h2>
+      <Link to="/cli"><a className="measure">Clients</a></Link> 
+      <Link to="/client"><a className="reduce">Clientcontrol</a></Link>
+      <Link to="/superadd"><a className="offset">Addsuperadmin</a></Link>
+      <Link to="/clidet"><a className="dashboard">Client details</a></Link> 
 
-     
-   
-   
-
-  
-     
-
-   
-      <Link to="/cli">
-      <a className="measure">Clients</a>
-        </Link> 
-        <Link to="/client">
-      <a className="reduce">Clientcontrol</a></Link>
-      <Link to="/superadd">
-      <a className="offset">Addsuperadmin</a></Link>
-      <Link to="/clidet">
-      <a className="dashboard">Client details</a>
-        </Link> 
-
-
-      <table class="clienttable">
-
-	
+<table className="clienttable">
 <thead>
   <tr>
     <th>S.NO</th>
@@ -263,29 +241,18 @@ setCalculation(() => count * 2);
    
   </tr>
 </thead>
-
-
-
-
       <tbody>
       {usrs.length > 0  ? usrs.map
     (todo => (
         <tr>
         <td  key="{qaait}">{i=i+1}</td>
         <td  key="{qantiy}">{todo.email}</td>
-        <td  key="{quantity">{todo.active}</td>
+        <td  key="{quantity">{todo.isActive+""}</td>
        
        
         </tr>
-        )) : (
-          <p>You have no users</p>
-        )}
+        )) : (<tr><td><p>You have no users</p></td></tr>)}
       </tbody>
-
-
-      
-    
-
 </table>
 
 
@@ -297,6 +264,7 @@ setCalculation(() => count * 2);
    
    
   
-    )}
+    )
+  }
 
 export default Scomp;

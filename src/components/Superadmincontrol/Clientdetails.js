@@ -67,35 +67,16 @@ useEffect(() => {
         alt=""
         src="../whatsapp-image-20221222-at-923-3@2x.png"
       />
-     <div className="ellipse-icon">  <Header/></div>
-     
-     
-     
- 
+     <div className="ellipse-icon"> 
+      <Header/>
+      </div>
       <h2 className="subuser">Client list</h2>
-
-     
-   
-   
-
-  
-     
-
-   
-      <Link to="/cli">
-      <a className="measure">Clients</a>
-        </Link> 
-        <Link to="/client">
-      <a className="reduce">Clientcontrol</a></Link>
-      <Link to="/superadd">
-      <a className="offset">Addsuperadmin</a></Link>
-      <Link to="/clidet">
-      <a className="dashboard">Client details</a>
-        </Link> 
-
-      <table class="clienttable2">
-
-	
+      <Link to="/cli"><a className="measure">Clients</a></Link> 
+      <Link to="/client"><a className="reduce">Clientcontrol</a></Link>
+      <Link to="/superadd"><a className="offset">Addsuperadmin</a></Link>
+      <Link to="/clidet"><a className="dashboard">Client details</a></Link> 
+      
+<table class="clienttable2">
 <thead>
   <tr>
     <th>S.NO</th>
@@ -119,21 +100,18 @@ useEffect(() => {
     (todo => (
         <tr>
         <td  key="{qaait}">{i=i+1}</td>
-        <td  key="{qantiy}">{todo.cname}</td>
-        <td  key="{quantity">{todo.email}</td>
-        <td  key="{qantiy}">{todo.currency}</td>
-        <td  key="{quantity">{todo.pocnumber}</td>
-        <td  key="{qantiy}">{todo.pocname}</td>
-        <td  key="{quantity">{todo.noemployees}</td>
-        <td  key="{qantiy}">{todo.website}</td>
-        <td  key="{quantity">{todo.address}</td>
-        <td  key="{qantiy}">{todo.description}</td>
-       
-       
-       
+        <td  key="{cname}">{todo.cname}</td>
+        <td  key="{email">{todo.email}</td>
+        <td  key="{currency}">{todo.currency}</td>
+        <td  key="{pocnumber">{todo.pocnumber}</td>
+        <td  key="{pocname}">{todo.pocname}</td>
+        <td  key="{noemployees">{todo.noemployees}</td>
+        <td  key="{website}">{todo.website}</td>
+        <td  key="{address">{todo.address}</td>
+        <td  key="{description}">{todo.description}</td>
         </tr>
         )) : (
-          <p>You have no users</p>
+          <tr><td><p>You have no users</p></td></tr>
         )}
       </tbody>
 

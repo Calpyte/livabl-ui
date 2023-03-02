@@ -53,15 +53,13 @@ const Header = () => {
     }
 
     return (
-        <>
-        
       
-            
+        <>
         {/* <NavLink to="/dash"><h1>LIVABL</h1></NavLink> */}
             <div className="avtar">
                 {
                     logindata ? <Avatar style={{ background: "salmon", fontWeight: "bold", textTransform: "capitalize" }} 
-                    onClick={handleClick}>{logindata.fname[0].toUpperCase()}</Avatar> :
+                    onClick={handleClick}>{logindata.fname.charAt(0).toUpperCase()}</Avatar> :
                         <Avatar style={{ background: "blue" }} onClick={handleClick} />
                 }
             </div>
@@ -70,30 +68,21 @@ const Header = () => {
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
-                MenuListProps={{
-                    'aria-labelledby': 'basic-button',
-                }}
-            >
-                {
-                    logindata ? (
+                MenuListProps={{'aria-labelledby': 'basic-button'}}
+            >{ logindata.fname ? 
+                (
                         <>
-                           
                             <MenuItem onClick={() => {
                                 logoutuser()
                                 handleClose()
                             }}>Logout</MenuItem>
-                           
                         </>
-                    ) : (
-                        <>
-                           
-                        </>
-                    )
-                }
+                    )  : (<></>)
+                } 
             </Menu>
     
 
-</>
+        </>
     )
 }
 

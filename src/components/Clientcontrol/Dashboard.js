@@ -92,22 +92,16 @@ asuser();
         data ? (
         <>
 <Routes> 
-    <Route path="/" element={<Scombustion/>}/>
-    <Route path="/homeview" element={<Scombustionhome/>}/>
-    <Route path="/question" element={<Question/>}/>
-            
-     
-       
-            <Route path="/downstream" element={<Downstream/>}/>
-            <Route path="/upstream" element={<Upstream/>}/>
-            <Route path="/capital" element={<Capitalgoods/>}/>
-    
-            <Route path="/fugitivetwo" element={<Fugitive2/>}/>
-         
-     
+      <Route path="/" element={<Scombustion/>}/>
+      <Route path="/homeview" element={<Scombustionhome/>}/>
+      <Route path="/question" element={<Question/>}/>
+      <Route path="/downstream" element={<Downstream/>}/>
+      <Route path="/upstream" element={<Upstream/>}/>
+      <Route path="/capital" element={<Capitalgoods/>}/>
+      <Route path="/fugitivetwo" element={<Fugitive2/>}/>
       <Route path="/companyadd2" element={<AssetDeclaration/>}/>
       <Route path="/companyadd" element={<CompanyDetails/>}/>
-    <Route path="/home" element={<Scombustion/>}/>
+      <Route path="/home" element={<Scombustion/>}/>
       <Route path="/homeview" element={<Scombustionhome/>}/>
       <Route path="/mobilecombustion" element={<Mobile/>}/>
       <Route path="/mobiledash" element={<Home1View/>}/>
@@ -119,7 +113,6 @@ asuser();
       <Route path="/profile" element={<Profile2/>}/>
       <Route path="/sco" element={<Scope2/>}/>
       <Route path="/scodash" element={<Scope2dash/>}/>
-    
       <Route path="/franchise" element={<Franchise/>}/>
       <Route path="/scope3good" element={<Goodsscope3/>}/>
       <Route path="/rec" element={<Recommendation/>}/>
@@ -130,7 +123,6 @@ asuser();
       <Route path="/updash" element={<Upstreamdashb/>}/>
       <Route path="/capdash" element={<Capdash/>}/>
       <Route path="/Main" element={<Mainpage/>}/>
-    
   </Routes>
 
           </>
