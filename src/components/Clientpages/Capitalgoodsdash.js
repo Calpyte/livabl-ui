@@ -35,7 +35,8 @@ asuser();
       //     })
       // });
 
-      const datap = await fetch(environment.baseUrl + "/capital-goods/get-all")
+      let api = logindata.type == 2 ? "/capital-goods/get-all" : "/capital-goods/by-user?email="+logindata.email
+      const datap = await fetch(api)
       const res = await datap.json();
       setTodoss(res);
       }

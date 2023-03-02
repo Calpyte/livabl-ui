@@ -2,9 +2,7 @@ import { useCallback ,useEffect,useState,useContext} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home1View.css";
 import { LoginContext } from "../ContextProvider/Context";
-import DatePicker from 'react-date-picker';
 import Header from './Header';
-import environment from "../../Environment";
 
 const Home1View = () => {
     const [value, onChange] = useState(new Date());
@@ -35,7 +33,8 @@ asuser();
       //          map
       //     })
       // });
-      const datap = await fetch(environment.baseUrl + "/fugitive/fugitive-get-all")
+      let api = logindata.type == 2 ? "/fugitive/fugitive-get-all" : "/fugitive/by-gases?email="+logindata.email
+      const datap = await fetch(api)
       const res = await datap.json();
       
       setTodoss(res);

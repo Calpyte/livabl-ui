@@ -97,7 +97,7 @@ const [inpval, setInpval] = useState({
               });}else{
 //calculation
 
-const email=he;
+const email=logindata.email;
 let date=Date.parse(dte);
 
           const data = await fetch(environment.baseUrl + "/upstream/save", {
@@ -141,7 +141,8 @@ let date=Date.parse(dte);
   }}
   const hellos =async(e)=>{
 const map=he
-    const datap = await fetch(environment.baseUrl + "/upstream/get-all", {
+let api = logindata.type == 2 ? "/upstream/get-all" : "/upstream/by-user?email="+logindata.email
+    const datap = await fetch(api, {
       method: "GET",
       // headers: {
       //     "Content-Type": "application/json"

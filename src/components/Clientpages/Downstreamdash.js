@@ -36,7 +36,8 @@ asuser();
       //          map
       //     })
       // });
-      const datap = await fetch(environment.baseUrl + "/downstream/get-all");
+      let api = logindata.type == 2 ? "/downstream/get-all" : "/downstream/by-user?email="+logindata.email
+      const datap = await fetch(api);
       const res = await datap.json();
       
       setTodoss(res);

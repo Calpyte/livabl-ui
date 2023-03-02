@@ -2,10 +2,7 @@ import { useCallback ,useEffect,useState,useContext} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home1View.css";
 import { LoginContext } from "../ContextProvider/Context";
-
 import Header from './Header';
-import environment from "../../Environment";
-
 
 const Home1View = () => {
   const [usrs, setTodoss] = useState([]);
@@ -25,7 +22,8 @@ const Home1View = () => {
 
 
   const hellos =async(e)=>{
-        const datap = await fetch(environment.baseUrl + "/stationary/by-user?email=" + logindata.email);
+        let api = logindata.type == 2 ? "stationary/get-all" : "stationary/by-user?email="+logindata.email
+        const datap = await fetch(api);
       const res = await datap.json();
       
       setTodoss(res);

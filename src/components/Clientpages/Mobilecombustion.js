@@ -268,7 +268,8 @@ let date=Date.parse(dte);
   
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch(environment.baseUrl + "/mobile/get-all", {
+    let api = logindata.type == 2 ? "/mobile/get-all" : "/mobile/by-user?email="+logindata.email
+        const datap = await fetch(api, {
           method: "GET",
           // headers: {
           //     "Content-Type": "application/json"
