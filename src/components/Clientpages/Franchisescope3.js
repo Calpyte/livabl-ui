@@ -132,7 +132,10 @@ const addCompanydata = async (e) => {
       //          map
       //     })
       // });
-      const datap = await fetch(environment.baseUrl + "/franchise/get-all")
+      let api = logindata.type == 2 ? "/franchise/get-all" : "/franchise/by-user?email="+logindata.email
+      const datap = await fetch(api,{
+        method: "GET"
+      });
       const res = await datap.json();
       
       setTodoss(res);

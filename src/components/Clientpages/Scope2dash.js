@@ -32,7 +32,8 @@ const Home1View = () => {
       //          map
       //     })
       // });
-      const datap = await fetch(environment.baseUrl + "/electricity/get-all");
+      let api = logindata.type == 2 ? "/elctricity/get-all" : "/electricity/by-user?email="+logindata.email
+      const datap = await fetch(api);
       const res = await datap.json();
       
       setTodoss(res);

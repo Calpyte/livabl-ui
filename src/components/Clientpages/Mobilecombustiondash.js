@@ -35,7 +35,8 @@ asuser();
       //          map
       //     })
       // });
-      const datap = await fetch(environment.baseUrl + "/mobile/get-all");
+      let api = logindata.type == 2 ? "/mobile/get-all" : "/mobile/by-user?email="+logindata.email
+      const datap = await fetch(api);
       const res = await datap.json();
       
       setTodoss(res);

@@ -654,7 +654,7 @@ let vall=null
             let co3=vall
             const email = logindata.email;
             let date=Date.parse(dte); 
-          const data = await fetch(environment.baseUrl +"/fugitive/fugitive-gases", {
+          const data = await fetch(environment.baseUrl + "fugitive/fugitive-gases", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -698,7 +698,8 @@ let vall=null
   }}
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch(environment.baseUrl +"/fugitive/get-all", {
+    let api = logindata.type == 2 ? "/fugitive/fugitive-get-all" : "/fugitive/by-gases?email="+logindata.email
+        const datap = await fetch(api, {
           method: "GET",
           // headers: {
           //     "Content-Type": "application/json"

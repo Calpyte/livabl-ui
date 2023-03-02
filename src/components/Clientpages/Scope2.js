@@ -136,13 +136,9 @@ asuser();
       console.log("errr");
     }
     
-                let co2=val
-               
-    let email=he
-    
-    
-    
-                let date=Date.parse(dte);
+            let co2=val
+            const email = logindata.email;
+            let date=Date.parse(dte);
     
     
               const data = await fetch(environment.baseUrl + "/electricity/save", {
@@ -192,7 +188,10 @@ asuser();
 
   const hellos =async(e)=>{
       const map=he
-      const datap = await fetch(environment.baseUrl + "/electricity/get-all");
+      let api = logindata.type == 2 ? "/electricity/get-all" : "/electricity/by-user?email="+logindata.email
+      const datap = await fetch(api,{
+        method:"GET"
+      });
       const res = await datap.json();
       setTodoss(res);
       // setCount((c) => c + 1) 

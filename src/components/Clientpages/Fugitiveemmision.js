@@ -371,7 +371,7 @@ let val=0
 
 
 
-const email=he;
+const email=logindata.email;
 
 let date=Date.parse(dte);
 
@@ -418,7 +418,8 @@ let co2=val
   
   const hellos =async(e)=>{
     const map=he
-        const datap = await fetch(environment.baseUrl + "/fugitive/get-all", {
+    let api = logindata.type == 2 ? "/fugitive/get-all" : "/stationary/by-user?email="+logindata.email
+        const datap = await fetch(api, {
           method: "GET",
         //   headers: {
         //       "Content-Type": "application/json"
