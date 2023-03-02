@@ -4,7 +4,6 @@ import "./dash.css"
 const Dashboard = () => {
     return(
         <>
-        
         <Link to="/login">
           <button id="bucli">Client</button>
         </Link>
