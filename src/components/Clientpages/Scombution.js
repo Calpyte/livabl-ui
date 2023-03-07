@@ -299,7 +299,7 @@ const Scomp = () =>{
 const asuser = async()=>{he=(logindata.ValidUserOne.map);
   person=(logindata.ValidUserOne.fname)}
 
-asuser();
+// asuser();
 
   const onViewDataClick = useCallback(() => {
   }, []);
@@ -378,7 +378,7 @@ const addCompanydata = async (e) => {
   const email=logindata.email;
   let date=Date.parse(dte);
   let token = localStorage.getItem('token');
-  const data = await fetch(environment.baseUrl + "stationary/save", {
+  const data = await fetch("/stationary/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json",

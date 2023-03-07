@@ -11,8 +11,11 @@ import {
   createTheme,
   StyledEngineProvider,
 } from "@mui/material";
+import { interceptor } from './components/intercept';
+
+
 const muiTheme = createTheme();
- 
+ const intercept = interceptor();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

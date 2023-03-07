@@ -22,7 +22,7 @@ const Home1View = () => {
 
 
   const hellos =async(e)=>{
-        let api = logindata.type == 2 ? "stationary/get-all" : "stationary/by-user?email="+logindata.email
+        let api = logindata.type == 2 ? "/stationary/get-all" : "/stationary/by-user?email="+logindata.email
         const datap = await fetch(api);
       const res = await datap.json();
       

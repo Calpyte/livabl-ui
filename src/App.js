@@ -102,7 +102,7 @@ import SubMainpage from "./components/Subuserpages/Maindash";
 
 //circular
 import CircularProgress from '@mui/material/CircularProgress';
-
+import { interceptor } from "./components/intercept";
 
 
 
@@ -113,6 +113,8 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 function App() {
   const [usrs, setTodoss] = useState([]);
+  const [intercept, setIntercept] = useState(false);
+
   let he="Client@gmail.com"
  
   const [data, setData] = useState(false);
@@ -149,12 +151,14 @@ function App() {
   }
 
   useEffect(() => {
+   
     setTimeout(()=>{
+      // interceptor();
       DashboardValid();
       setData(true)
     },2000)
 
-  }, [])
+  }, [intercept])
 
   return (
     <>

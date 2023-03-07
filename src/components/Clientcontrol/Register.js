@@ -78,7 +78,7 @@ const Register = () => {
       } else {
             // console.log("user registration succesfully done");
            let type = 0; //
-            const data = await fetch("user/register", {
+            const data = await fetch("/user/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
