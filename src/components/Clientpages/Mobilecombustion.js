@@ -224,7 +224,7 @@ let co2 = literdistance === "liter" ? quantity*(cdata[fuel])["co2"] : literdista
           
 let date=Date.parse(dte); 
           const email = logindata.email;
-          const data = await fetch(environment.baseUrl + "/mobile/save", {
+          const data = await fetch("/mobile/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"

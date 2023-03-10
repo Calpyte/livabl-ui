@@ -531,12 +531,12 @@ thead tr th {
 
 
 .info{
-  position: absolute;
+  /* position: absolute; */
   top: 1000px;
   left: 70px;
 }
 .infoo{
-  position: absolute;
+  /* position: absolute; */
   top: 1000px;
   left: 70px;
 }
@@ -562,13 +562,13 @@ table.infooo {
   border: 1px solid black;
 }
 .infooo{
-  position: absolute;
+  /* position: absolute; */
   top: 1000px;
   left: 130px;
 }
 
 .down1{
-  position: absolute;
+  /* position: absolute; */
   top: 1000px;
   left: 130px;
 }
@@ -638,12 +638,12 @@ table.down2 tbody {
   overflow-x: hidden;
 }
 .down2{
-  position: absolute;
+  /* position: absolute; */
   top: 1400px;
   left: 130px;
 }
 .down3{
-  position: absolute;
+  /* position: absolute; */
   top: 1800px;
   left: 130px;
 }
@@ -655,7 +655,7 @@ table.down3 {
   border: 1px solid black;
 }
 .down4{
-  position: absolute;
+  /* position: absolute; */
   top: 1200px;
   left: 50px;
 }

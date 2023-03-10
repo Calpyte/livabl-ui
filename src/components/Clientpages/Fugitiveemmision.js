@@ -377,7 +377,7 @@ let date=Date.parse(dte);
 
 
 let co2=val
-          const data = await fetch(environment.baseUrl + "/fugitive/save", {
+          const data = await fetch("/fugitive/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"

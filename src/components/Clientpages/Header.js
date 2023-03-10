@@ -23,6 +23,7 @@ const Header = () => {
 
     const logoutuser = async () => {
         let token = localStorage.getItem("token");
+       
         const res = await fetch("user/logout", {
             method: "GET",
             headers: {
@@ -31,10 +32,12 @@ const Header = () => {
                  Accept: "application/json"
             },
             credentials: "include"
-        });
-    localStorage.removeItem("token");
-    setLoginData(false)
-    history("/");
+        }).catch(err=> console.log(err));
+
+        localStorage.removeItem("token");
+        setLoginData(false)
+        history("/");
+   
     }
 
     const goDash = () => {

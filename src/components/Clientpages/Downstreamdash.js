@@ -5,6 +5,8 @@ import { LoginContext } from "../ContextProvider/Context";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
 import environment from "../../Environment";
+import React, {useRef} from 'react';
+import { DownloadTableExcel } from 'react-export-table-to-excel';
 
 const Home1View = () => {
     const [value, onChange] = useState(new Date());
@@ -12,11 +14,12 @@ const Home1View = () => {
   const [count, setCount] = useState(0);
   const [calculation, setCalculation] = useState(0);
   const { logindata } = useContext(LoginContext);
-  
-  let he="hello"
-const asuser = async()=>{he=(logindata.ValidUserOne.map)}
+  const tableRef = useRef(null);
 
-asuser();
+//   let he="hello"
+// const asuser = async()=>{he=(logindata.ValidUserOne.map)}
+
+// asuser();
 
   const navigate = useNavigate();
 
@@ -26,7 +29,7 @@ asuser();
 
 
   const hellos =async(e)=>{
-    const map=he
+    //const map=he
       //   const datap = await fetch("/downdash", {
       //     method: "POST",
       //     headers: {
@@ -144,13 +147,18 @@ let i=0;
         Offset
       </Link>
      <Link to="/Main">
-      <a className="dashboard">Dashboard</a>        </Link>
-      <table class="down1">
+      <a className="dashboard">Dashboard</a>        
+      </Link>
 
-	
-
-
-
+<div className="down1">
+<DownloadTableExcel
+                    filename="Scope 3 - Downstream1"
+                    sheet="Downstream1"
+                    currentTableRef={tableRef.current}
+                >
+                   <button> Export excel </button>
+                </DownloadTableExcel>
+      <table ref={tableRef} style={{border: '1px solid black',width: '1400px'}} id="down1">
 <thead>
   <tr>
     <th>S.NO</th>
@@ -161,15 +169,10 @@ let i=0;
     <th>distance travelled in KM</th>
     <th>material</th>
     <th>quantity</th>
-    
 
   <th>date</th>
-
   </tr>
 </thead>
-
-
-
 
       <tbody>
       {usrs.length > 0  ? usrs.map
@@ -184,9 +187,7 @@ let i=0;
         <td  key="{quantt}">{todo.material}</td>
         <td  key="{quantit}">{todo.quantity}</td>
      
-    
         <td  key="quantity">{todo.downstreamDateStr}</td>
-    
     
         </tr>
         )) : (
@@ -194,18 +195,18 @@ let i=0;
         )}
       </tbody>
 
-
-      
-    
-
 </table>
+</div>
 
-<table class="down2">
-
-	
-
-
-
+<div className="down2">
+<DownloadTableExcel
+                    filename="Scope 3 - Downstream2"
+                    sheet="Downstream2"
+                    currentTableRef={tableRef.current}
+                >
+                   <button> Export excel </button>
+                </DownloadTableExcel>
+<table ref={tableRef} style={{border: '1px solid black',width: '1400px'}} id="down2">
 <thead>
   <tr>
     <th>S.NO</th>
@@ -218,16 +219,12 @@ let i=0;
     <th>quantity</th>
     <th>Processing performed</th>
     <th>Final product</th>  
-      <th>Mode of Transport</th>   
-       <th>Type of vehicle</th>
-  
-  <th>date</th>
+    <th>Mode of Transport</th>   
+    <th>Type of vehicle</th>
 
+  <th>date</th>
   </tr>
 </thead>
-
-
-
 
       <tbody>
       {usrs.length > 0  ? usrs.map
@@ -248,28 +245,23 @@ let i=0;
         
         <td  key="quantity">{todo.date}</td>
     
-    
         </tr>
         )) : (
           <p>You have no data</p>
         )}
       </tbody>
-
-
-      
-    
-
 </table>
+</div>
 
-
-
-
-<table class="down3">
-
-	
-
-
-
+<div className="down3">
+<DownloadTableExcel
+                    filename="Scope 3 - Downstream3"
+                    sheet="Downstream3"
+                    currentTableRef={tableRef.current}
+                >
+                   <button> Export excel </button>
+                </DownloadTableExcel>
+<table ref={tableRef} style={{border: '1px solid black',width: '1400px'}} id="down3">
 <thead>
   <tr>
     <th>S.NO</th>
@@ -290,9 +282,6 @@ let i=0;
   </tr>
 </thead>
 
-
-
-
       <tbody>
       {usrs.length > 0  ? usrs.map
     (todo => (
@@ -312,19 +301,13 @@ let i=0;
         
         <td  key="quantity">{todo.date}</td>
     
-    
         </tr>
         )) : (
           <p>You have no data</p>
         )}
       </tbody>
-
-
-      
-    
-
 </table>
-
+</div>
     </div>
   );
 };

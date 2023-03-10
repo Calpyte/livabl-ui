@@ -654,7 +654,7 @@ let vall=null
             let co3=vall
             const email = logindata.email;
             let date=Date.parse(dte); 
-          const data = await fetch(environment.baseUrl + "fugitive/fugitive-gases", {
+          const data = await fetch("fugitive/fugitive-gases", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"

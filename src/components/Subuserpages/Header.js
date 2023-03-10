@@ -32,7 +32,7 @@ const Header = () => {
             Accept: "application/json"
         },
         credentials: "include"
-    });
+    }).catch(err=> console.log(err));
     localStorage.removeItem("token");
     setLoginData(false)
     history("/");
