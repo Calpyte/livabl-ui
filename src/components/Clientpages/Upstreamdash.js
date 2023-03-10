@@ -5,6 +5,8 @@ import { LoginContext } from "../ContextProvider/Context";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
 import environment from "../../Environment";
+import React, {useRef} from 'react';
+import { DownloadTableExcel } from 'react-export-table-to-excel';
 
 const Home1View = () => {
     const [value, onChange] = useState(new Date());
@@ -12,11 +14,12 @@ const Home1View = () => {
   const [count, setCount] = useState(0);
   const [calculation, setCalculation] = useState(0);
   const { logindata } = useContext(LoginContext);
-  
-  let he="hello"
-const asuser = async()=>{he=(logindata.ValidUserOne.map)}
+  const tableRef = useRef(null);
 
-asuser();
+//   let he="hello"
+// const asuser = async()=>{he=(logindata.ValidUserOne.map)}
+
+// asuser();
 
   const navigate = useNavigate();
 
@@ -24,7 +27,7 @@ asuser();
     navigate("/fug");
   }, [navigate]);
   const hellos =async(e)=>{
-    const map=he
+    //const map=he
       //   const datap = await fetch("/upstreamdash", {
       //     method: "POST",
       //     headers: {
@@ -145,13 +148,18 @@ let i=0;
         Offset
       </Link>
      <Link to="/Main">
-      <a className="dashboard">Dashboard</a>        </Link>
-      <table class="down4">
+      <a className="dashboard">Dashboard</a>        
+      </Link>
 
-	
-
-
-
+<div className="down4">
+<DownloadTableExcel
+                    filename="Scope 3 - Upstream"
+                    sheet="Upstream"
+                    currentTableRef={tableRef.current}
+                >
+                   <button> Export excel </button>
+                </DownloadTableExcel>
+<table ref={tableRef} style={{border: '1px solid black',width: '1400px'}} id="down4">
 <thead>
   <tr>
     <th>S.NO</th>
@@ -227,7 +235,7 @@ let i=0;
     
 
 </table>
-
+</div>
 
     </div>
   );

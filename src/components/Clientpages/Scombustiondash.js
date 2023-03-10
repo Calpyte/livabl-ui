@@ -3,12 +3,18 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Home1View.css";
 import { LoginContext } from "../ContextProvider/Context";
 import Header from './Header';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
+import { margin } from "@mui/system";
+import React, {useRef} from 'react';
+import { DownloadTableExcel } from 'react-export-table-to-excel';
+
 
 const Home1View = () => {
   const [usrs, setTodoss] = useState([]);
   const [count, setCount] = useState(0);
   const [calculation, setCalculation] = useState(0);
   const { logindata } = useContext(LoginContext);
+  const tableRef = useRef(null);
 
 // const asuser = async()=>{he=(logindata.ValidUserOne.map)}
 
@@ -141,10 +147,26 @@ let i=0;
       <Link className="dashboard" to="/Main">
         Dashboard
       </Link>
-      <table class="info">
 
-	
-<thead>
+<div className="info" >
+{/* <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="download-table-xls-button"
+                    table="info"
+                    filename="Scope 1"
+                    sheet="Stationary Combustion"
+                    buttonText="Download as XLS"/> */}
+      {/* <table class="info">  */}
+      <DownloadTableExcel
+                    filename="Scope 1 - Stationary Combustion"
+                    sheet="Stationary Combustion"
+                    currentTableRef={tableRef.current}
+                >
+                   <button> Export excel </button>
+                </DownloadTableExcel>
+
+<table ref={tableRef} style={{border: '1px solid black',width: '1400px'}} id="info">      
+<thead >
   <tr>
     <th>S.NO</th>
     <th>Facility Name</th>
@@ -155,10 +177,6 @@ let i=0;
     <th>Carbonfootprint</th>
   </tr>
 </thead>
-
-
-
-
       <tbody>
       {usrs.length > 0  ? usrs.map
     (todo => (
@@ -177,12 +195,8 @@ let i=0;
         )}
       </tbody>
 
-
-      
-    
-
 </table>
-
+</div>
     </div>
   );
 };

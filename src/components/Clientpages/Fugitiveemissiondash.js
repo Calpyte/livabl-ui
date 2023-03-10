@@ -5,6 +5,8 @@ import { LoginContext } from "../ContextProvider/Context";
 import DatePicker from 'react-date-picker';
 import Header from './Header';
 import environment from "../../Environment";
+import React, {useRef} from 'react';
+import { DownloadTableExcel } from "react-export-table-to-excel";
 
 const Home1View = () => {
     const [value, onChange] = useState(new Date());
@@ -12,11 +14,12 @@ const Home1View = () => {
   const [count, setCount] = useState(0);
   const [calculation, setCalculation] = useState(0);
   const { logindata } = useContext(LoginContext);
+  const tableRef = useRef(null);
   
-  let he="hello"
-const asuser = async()=>{he=(logindata.ValidUserOne.map)}
+//   let he="hello"
+// const asuser = async()=>{he=(logindata.ValidUserOne.map)}
 
-asuser();
+// asuser();
 
   const navigate = useNavigate();
 
@@ -24,7 +27,7 @@ asuser();
     navigate("/fug");
   }, [navigate]);
   const hellos =async(e)=>{
-    const map=he
+    // const map=he
       //   const datap = await fetch("/fugdash", {
       //     method: "POST",
       //     headers: {
@@ -149,10 +152,18 @@ let i=0;
         Offset
       </Link>
      <Link to="/Main">
-      <a className="dashboard">Dashboard</a>        </Link>
-      <table class="infooo">
+      <a className="dashboard">Dashboard</a>        
+      </Link>
 
-	
+<div className="infooo">
+<DownloadTableExcel
+                    filename="Scope 1 - Fugitive Emissions"
+                    sheet="Fugitive Emissions"
+                    currentTableRef={tableRef.current}
+                >
+                   <button> Export excel </button>
+                </DownloadTableExcel>
+<table ref={tableRef} style={{border: '1px solid black',width: '1400px'}} id="infooo">
 <thead>
   <tr>
     <th>S.NO</th>
@@ -204,6 +215,7 @@ let i=0;
     
 
 </table>
+</div>
 
     </div>
   );

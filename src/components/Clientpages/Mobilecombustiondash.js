@@ -4,19 +4,20 @@ import "./Home1View.css";
 import { LoginContext } from "../ContextProvider/Context";
 import Header from './Header';
 import environment from "../../Environment";
+import React, {useRef} from 'react';
+import { DownloadTableExcel } from 'react-export-table-to-excel';
 
 const Home1View = () => {
   const [usrs, setTodoss] = useState([]);
   const [count, setCount] = useState(0);
   const [calculation, setCalculation] = useState(0);
   const { logindata } = useContext(LoginContext);
-  
-  let he="hello"
+  const tableRef = useRef(null);
 
-  const asuser = async()=>{he=(logindata.ValidUserOne.map);
-   }
+//   const asuser = async()=>{he=(logindata.ValidUserOne.map);
+//    }
 
-asuser();
+// asuser();
 
   const navigate = useNavigate();
 
@@ -24,7 +25,6 @@ asuser();
     navigate("/mobilecombustion");
   }, [navigate]);
   const hellos =async(e)=>{
-    const map=he
     
       //   const datap = await fetch("/getmobile", {
       //     method: "POST",
@@ -149,10 +149,19 @@ let i=0;
         Offset
       </Link>
      <Link to="/Main">
-      <a className="dashboard">Dashboard</a>        </Link>
-      <table class="infoo">
+      <a className="dashboard">Dashboard</a>        
+      </Link>
 
-	
+<div className="infoo">
+  <DownloadTableExcel
+                    filename="Scope 1 - Mobile Combustion"
+                    sheet="Mobile Combustion"
+                    currentTableRef={tableRef.current}
+                >
+                   <button> Export excel </button>
+  </DownloadTableExcel>
+
+  <table ref={tableRef} style={{border: '1px solid black',width: '1400px'}} id="infoo">
 <thead>
   <tr>
     <th>S.NO</th>
@@ -174,9 +183,6 @@ let i=0;
   </tr>
 </thead>
 
-
-
-
       <tbody>
       {usrs.length > 0  ? usrs.map
     (todo => (
@@ -197,12 +203,9 @@ let i=0;
           <p>You have no data</p>
         )}
       </tbody>
-
-
       
-    
-
 </table>
+</div>
 
     </div>
   );

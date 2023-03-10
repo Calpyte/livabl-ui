@@ -88,7 +88,7 @@ productname2:"",disposal:"",lease:"",namefranchise:"",location:""
 const email=logindata.email;
 let date=Date.parse(dte);
 
-          const data = await fetch(environment.baseUrl + "/downstream/save", {
+          const data = await fetch("/downstream/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"

@@ -94,7 +94,7 @@ const [inpval, setInpval] = useState({
                 const email = logindata.email;
            
 
-          const data = await fetch(environment.baseUrl + "/process/save", {
+          const data = await fetch("/process/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"

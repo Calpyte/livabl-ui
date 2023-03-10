@@ -89,7 +89,7 @@ const addCompanydata = async (e) => {
       const email = logindata.email;
       let date=Date.parse(dte);
 
-        const data = await fetch(environment.baseUrl + "/franchise/save", {
+        const data = await fetch("/franchise/save", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

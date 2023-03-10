@@ -100,7 +100,7 @@ const [inpval, setInpval] = useState({
 const email=logindata.email;
 let date=Date.parse(dte);
 
-          const data = await fetch(environment.baseUrl + "/upstream/save", {
+          const data = await fetch("/upstream/save", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
