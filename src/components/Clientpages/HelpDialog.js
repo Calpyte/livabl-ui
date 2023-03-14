@@ -15,7 +15,7 @@ import Header from './Header';
 
 export default function HelpDialog(props) {
   const [open, setOpen] = React.useState(false);
-  const [buttonTxt,setButtonTxt] = React.useState("Button")
+  const [buttonTxt,setButtonTxt] = React.useState("How Can I Help You ?")
   const {children,onClose} = props;
   const { logindata } = React.useContext(LoginContext);
   const handleClickOpen = () => {
@@ -72,12 +72,15 @@ export default function HelpDialog(props) {
  <ToastContainer/>
 
        <div style={{"display": "flex", "justifyContent": "center"}}> {/*style={{padding:"0 30%"}} */}
-      <ReactPlayer width='50%' controls url=""/>
+         <ReactPlayer width='50%' controls url=""/>
+        
       </div>
-      
+      <div style={{padding:"3% 0 0 40%"}}>
       <Button variant="outlined" onClick={handleClickOpen}>
         {buttonTxt}
       </Button>
+      </div>
+    
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Help Message</DialogTitle>
         <DialogContent>
@@ -116,7 +119,7 @@ export default function HelpDialog(props) {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleSubmit}>Subscribe</Button>
+          <Button onClick={handleSubmit}>Submit</Button>
         </DialogActions>
       </Dialog>
     </div>

@@ -103,6 +103,7 @@ import SubMainpage from "./components/Subuserpages/Maindash";
 //circular
 import CircularProgress from '@mui/material/CircularProgress';
 import { interceptor } from "./components/intercept";
+import HelpDialog from './components/Clientpages/HelpDialog';
 
 
 
@@ -243,6 +244,7 @@ function App() {
     <Route path="/clidet" element={<Clientdetail/>}/>
     <Route path="/superadd" element={<Superadd/>}/>
     <Route path="/Main" element={<Mainpage/>}/>
+    <Route path='/help' element={<HelpDialog/>} />
        
 
    {/* <Route path="/report" element={<Report/>}/> */}
