@@ -1,6 +1,5 @@
 import Header from './Header';
 import { Form, Button } from "react-bootstrap";
-
 import React, { Component ,useCallback ,useState,useContext, useEffect} from 'react';
 import { NavLink,useNavigate,Link} from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
@@ -472,7 +471,7 @@ setCalculation(() => count * 2);
       <div className="home1-add-child6" />
       <Link to="/dash">
          <a className="scope-12">Scope 1</a>
-        </Link>
+      </Link>
         <Link to="/sco">
         <a className="scope-2">Scope 2</a>
         </Link>
@@ -483,13 +482,10 @@ setCalculation(() => count * 2);
       
       <Link to="/dash">
       <a className="stationary-c2">Stationary Combustion</a>
-        </Link>
+      </Link>
 
         <Link to="/mobilecombustion">
-
-
-        <a className="mobile-combustion">
-          
+        <a className="mobile-combustion">  
         <p className="mobile">{`Mobile `}</p>
         <p className="combustion">Combustion</p>
       </a>
@@ -642,18 +638,13 @@ setCalculation(() => count * 2);
         alt=""
         src="../117785factorypollutioncityairandwater-1@2x.png"
       />
-      <a className="measure">Measure</a>
-      <a className="reduce">Reduce</a>
-      <a className="offset">Offset</a>
-      <Link to="/Main">
-      <Link to="/Main">
-      <Link to="/Main">
-      <a className="dashboard">Dashboard</a>        </Link>        </Link>       </Link>
-    
+      <Link to="/dash"><a className="measure">Measure</a></Link>
+      <Link to="/"><a className="reduce">Reduce</a></Link>
+      <Link to="/help"><a className="offset">Help</a></Link>
+      <Link to="/Main"><a className="dashboard">Dashboard</a></Link>       
  <ToastContainer/>
     </div>
-   
-  
+    
     )}
 
 export default Scomp;

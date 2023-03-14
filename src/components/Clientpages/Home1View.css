@@ -445,7 +445,7 @@
 }
 .dashboard,
 .measure,
-.offset,
+.help,
 .reduce {
   cursor: pointer;
   text-decoration: underline;
@@ -461,14 +461,14 @@
   height: 31px;
 }
 .dashboard,
-.offset,
+.help,
 .reduce {
   text-decoration: none;
   left: 645px;
   color: var(--color-black);
 }
 .dashboard,
-.offset {
+.help {
   left: 823px;
 }
 .dashboard {

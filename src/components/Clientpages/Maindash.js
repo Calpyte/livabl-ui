@@ -7,19 +7,8 @@ import Header from './Header';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import { LoginContext } from "../ContextProvider/Context";
 import { useReactToPrint } from "react-to-print";
-
-
-
-
-
-
- 
-
-     
-     
-			
-        
-
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 
 function Recommendation(){
   
@@ -34,9 +23,35 @@ function Recommendation(){
   const [usrs3, setTodos3] = useState([]);
   const [usrs4, setTodos4] = useState([]);
 
-
-
-
+  // const [chartOptions,setChartOptions] = useState({
+  //   chart: {
+  //     type: 'pie'
+  //   },
+  //   title: {
+  //     text: 'Combustions'
+  //   },
+  //   plotOptions: {
+  //     pie: {
+  //       allowPointSelect: true,
+  //       cursor: 'pointer',
+  //       dataLabels: {
+  //         enabled: true,
+  //         format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+  //       }
+  //     }
+  //   },
+  //   series: [{
+  //     name: 'Combusion',
+  //     data:[
+  //       { name: 'Mobile Combustion', y: 345 },
+  //       { name: 'NO DATA', y:  0.001 },
+  //       { name: 'Fugitive Emissions', y:  456 },
+  //       { name: 'Fugitive Gases', y: 345},
+  //       { name: 'Stationary Combustion', y:  345 },
+  //       { name: 'Electricity Combustion', y: 56 }
+  //     ]
+  //   }]
+  // })
 
 
 const { logindata } = useContext(LoginContext);
@@ -45,7 +60,6 @@ let person="hello"
 const asuser = async()=>{he=(logindata.ValidUserOne.map);
 person=(logindata.fname)}
 asuser();
-
 
 
 const hellos =async(e)=>{
@@ -172,17 +186,6 @@ const hellos =async(e)=>{
                 
                 }
 let total=  element+element1+element2+element3+element4
-               
-
-
-
-
-
-
-
-
-
-
 
     
     useEffect(() => {
@@ -217,16 +220,16 @@ let total=  element+element1+element2+element3+element4
         src="../whatsapp-image-20221222-at-923-3@2x.png"
       /> 
    <div className="ellipse-icon"><Header/></div>  
-      <Link className="measure" to="/home1add">
+      <Link className="measure" to="/dash">
         Measure
       </Link>
-      <Link className="reduce" to="/home1add">
+      <Link className="reduce" to="/">
         Reduce
       </Link>
-      <Link className="offset" to="/home1add">
-        Offset
+      <Link className="help" to="/help">
+        Help
       </Link>
-      <Link className="dashboard" to="/fugdash">
+      <Link className="dashboard" to="/Main">
         Dashboard
       </Link> 
     <div className='rect'></div>
@@ -254,6 +257,10 @@ let total=  element+element1+element2+element3+element4
                 <Tooltip/>
             </PieChart>
         </ResponsiveContainer>
+        {/* <HighchartsReact  
+        highcharts={Highcharts}
+        options={chartOptions}
+      /> */}
       </div>
         <div className='colorled'></div>
         <div className='colorled1'></div>

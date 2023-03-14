@@ -531,10 +531,6 @@ useEffect(() => {
             )}
 					</tbody>
 
-	
-					
-				
-		
 	</table>
   <table class="scrolldownp" rules="all">
 		
@@ -548,9 +544,6 @@ useEffect(() => {
 			</tr>
 		</thead>
 		
-
-		
-	
 					<tbody class="hello">
           {usrp.length > 0  ? usrp.map
 				(todo => (
@@ -559,17 +552,12 @@ useEffect(() => {
 						<td  key="{quantity}">{todo.productid}</td>
 						<td  key="quantity">{todo.productdescription}</td>
 						
-				
 						</tr>
             )) : (
               <p>You have no data</p>
             )}
 					</tbody>
 
-	
-					
-				
-		
 	</table>
   <table class="scrolldowns" rules="all">
 		

@@ -500,7 +500,8 @@ quantity,material,distance,vehicle,transport,facility,byerlocation,byername,code
          <a className="reduce">Reduce</a>
          <a className="offset">Offset</a>
          <Link to="/Main">
-      <a className="dashboard">Dashboard</a>        </Link>
+            <a className="dashboard">Dashboard</a>        
+         </Link>
     <ToastContainer/>
        </div>
 
