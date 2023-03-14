@@ -40,7 +40,6 @@ export default function HelpDialog(props) {
         subject: document.getElementById("regarding").value,
         body: content,
     }
-    props.onResult(obj);
 
     const data = await fetch("/message/help-mail", {
       method: "POST",
@@ -49,11 +48,7 @@ export default function HelpDialog(props) {
           "Authorization": localStorage.getItem('token'),
       },
       body: JSON.stringify(obj)
-  });
-  const res = await data.json();
-
-    handleClose();
-
+  }).then(()=> handleClose()).catch((err) => handleClose());
   }
 
   return (
