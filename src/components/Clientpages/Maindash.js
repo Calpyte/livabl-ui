@@ -7,7 +7,6 @@ import Header from './Header';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import { LoginContext } from "../ContextProvider/Context";
 import { useReactToPrint } from "react-to-print";
-import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 function Recommendation(){
@@ -220,10 +219,10 @@ let total=  element+element1+element2+element3+element4
         src="../whatsapp-image-20221222-at-923-3@2x.png"
       /> 
    <div className="ellipse-icon"><Header/></div>  
-      <Link className="measure" to="/dash">
+      <Link className="measure" style={{zIndex:'1'}} to="/dash">
         Measure
       </Link>
-      <Link className="reduce" to="/">
+      <Link className="reduce" to="/dash">
         Reduce
       </Link>
       <Link className="help" to="/help">
@@ -250,7 +249,7 @@ let total=  element+element1+element2+element3+element4
         
         
       <div className='pie'> 
-        <ResponsiveContainer width="40%" height={850}>
+        <ResponsiveContainer width="40%" height={850} style={{ zIndex: '-1' }}>
             <PieChart width={50} height={50}  >
                 <Pie  data={data} nameKey="name" dataKey="students" outerRadius={150}  cx="50%" cy="50%" width={50} height={10}  label/>
                 
